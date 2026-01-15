@@ -134,8 +134,8 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "p21",
-    src: "https://artwork-hub.vercel.app/images/catbin.jpg",
-    alt: "Catbin in the Snow",
+    src: "https://artwork-hub.vercel.app/images/cabin.jpg",
+    alt: "Cabin in the Snow",
     ratio: 1.1,
   },
   {
@@ -192,4 +192,43 @@ export const galleryItems: GalleryItem[] = [
     alt: "sakura with clouds",
     ratio: 1.3,
   },
+  {
+    id: "p31",
+    src: "https://artwork-hub.vercel.app/images/sheeppatern.jpg",
+    alt: "Yellow Sheep Pattern",
+    ratio: 1.2,
+  },
+  {
+    id: "p32",
+    src: "https://artwork-hub.vercel.app/images/sheeps.jpg",
+    alt: "Sheeps in the Field",
+    ratio: 1.2,
+  },
+  {
+    id: "p33",
+    src: "https://artwork-hub.vercel.app/images/snowman2.jpg",
+    alt: "Snowman with Scarf",
+    ratio: 1.1,
+  },
+  {
+    id: "p34",
+    src: "https://artwork-hub.vercel.app/images/snowtemple.jpg",
+    alt: "Snow Temple",
+    ratio: 1.5,
+  },
+  {
+    id: "p35",
+    src: "https://artwork-hub.vercel.app/images/twocats.jpg",
+    alt: "Two Cats Sitting",
+    ratio: 1.1,
+  },
+  {
+    id: "p36",
+    src: "https://artwork-hub.vercel.app/images/whitebird.jpg",
+    alt: "Red-frowned crane",
+    ratio: 1.1,
+  },
+
+
+
 ];
