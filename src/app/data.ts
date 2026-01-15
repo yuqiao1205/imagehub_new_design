@@ -220,7 +220,8 @@ export const galleryItems: GalleryItem[] = [
     id: "p34",
     src: "https://artwork-hub.vercel.app/images/snowtemple.jpg",
     alt: "Snow Temple",
-    ratio: 1.5,
+    ratio: 0.7,
+    objectFit: 'contain',
   },
   {
     id: "p35",
