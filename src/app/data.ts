@@ -7,6 +7,10 @@ export type GalleryItem = {
    * Higher number = wider image within the row.
    */
   ratio: number;
+  /**
+   * Object fit for the image: 'cover' or 'contain'.
+   */
+  objectFit?: 'cover' | 'contain';
 };
 
 // Pexels examples (you can swap/add more). We vary span + aspect for a dynamic layout.
@@ -166,7 +170,8 @@ export const galleryItems: GalleryItem[] = [
     id: "p26",
     src: "https://artwork-hub.vercel.app/images/moutain.jpg",
     alt: "Moutain View",
-    ratio: 1.5,
+    ratio: 0.6,
+    objectFit: 'contain',
   },
   {
     id: "p27",
@@ -178,7 +183,8 @@ export const galleryItems: GalleryItem[] = [
     id: "p28",
     src: "https://artwork-hub.vercel.app/images/phonebox.jpg",
     alt: "London Phone Box",
-    ratio: 1.5,
+    ratio: 0.5,
+    objectFit: 'contain',
   },
   {
     id: "p29",
