@@ -13,6 +13,11 @@ const nextConfig: NextConfig = {
         hostname: "pexels.com",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "artwork-hub.vercel.app",
+        pathname: "/**",
+      },
     ],
   },
 };
