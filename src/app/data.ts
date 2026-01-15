@@ -15,7 +15,7 @@ export const galleryItems: GalleryItem[] = [
     id: "p1",
     src: "https://images.pexels.com/photos/35051828/pexels-photo-35051828.jpeg",
     alt: "Landscape photo from Pexels",
-    ratio: 1.7,
+    ratio: 1.5,
   },
   {
     id: "p2",
@@ -33,7 +33,7 @@ export const galleryItems: GalleryItem[] = [
     id: "p4",
     src: "https://images.pexels.com/photos/34608529/pexels-photo-34608529.jpeg",
     alt: "Coastal view from Pexels",
-    ratio: 1.4,
+    ratio: 1.3,
   },
   {
     id: "p5",

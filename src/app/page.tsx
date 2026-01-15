@@ -36,7 +36,7 @@ export default function Home() {
 
             <a
               href="#gallery"
-              className="hidden rounded-full bg-zinc-900 px-4 py-2 text-sm font-medium text-white shadow-sm shadow-zinc-900/10 transition hover:bg-zinc-800 md:inline-flex"
+              className="hidden rounded-full bg-zinc-900 px-4 py-2 text-sm font-medium text-white shadow-sm shadow-zinc-900/10 transition hover:bg-zinc-800 md:inline-flex mt-3"
             >
               View Gallery
             </a>
@@ -129,9 +129,7 @@ export default function Home() {
               About
             </h2>
             <p className="mt-3 text-base leading-7 text-zinc-600">
-              This is a simple Next.js App Router gallery layout with a sticky
-              sidebar and a responsive, mixed-size grid. Images are loaded via
-              Next/Image from Pexels.
+              I create warm, curious, and slightly surreal images by mixing texture, light, and clean composition. Inspired by Van Gogh, I experiment with bold color blocks and acrylic markers to create expressive, layered works. This site is a living archive of my recent work and visual explorations in progress.
             </p>
           </section>
 
@@ -139,9 +137,12 @@ export default function Home() {
             <h2 className="text-xl font-semibold tracking-tight text-zinc-950">
               Contact
             </h2>
-            <p className="mt-3 text-base leading-7 text-zinc-600">
-              Add your contact details here — email, socials, or a form.
-            </p>
+            <div className="mt-3 space-y-2 text-base leading-7 text-zinc-600">
+              <p>Email: laurenpy1226@gmail.com</p>
+              <p>Location: San Francisco, CA</p>
+              <p>Portfolio: <a href="https://yuqiao1205.github.io/portfolio/" target="_blank" rel="noopener noreferrer" className="text-zinc-950 hover:text-zinc-700 underline">yuqiao1205.github.io/portfolio</a></p>
+              <p>Available for commissions and collaborations</p>
+            </div>
           </section>
         </main>
       </div>
