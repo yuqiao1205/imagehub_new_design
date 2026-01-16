@@ -92,34 +92,30 @@ export default function Home() {
           </header>
 
           <section id="gallery" className="mt-10 scroll-mt-10">
-            <div className="space-y-3 md:space-y-4">
-              {rows.map((row, rowIdx) => (
-                <div key={rowIdx} className="flex w-full gap-3 md:gap-4">
-                  {row.map((item, colIdx) => (
-                    <figure
-                      key={`${item.id}-${rowIdx}-${colIdx}`}
-                      style={{ flexGrow: item.ratio, flexBasis: 0 }}
-                      className="group relative h-40 min-w-0 overflow-hidden transition hover:-translate-y-0.5 sm:h-44 md:h-52 lg:h-60"
-                    >
-                      <Image
-                        src={item.src}
-                        alt={item.alt}
-                        fill
-                        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                        className={`object-${item.objectFit || 'cover'} transition duration-500 ease-out group-hover:scale-[1.06]`}
-                        priority={item.id === "p1"}
-                      />
+            <div className="columns-3 gap-3 md:gap-4 space-y-3 md:space-y-4">
+              {galleryItems.map((item) => (
+                <figure
+                  key={item.id}
+                  style={{ aspectRatio: item.ratio }}
+                  className="group relative overflow-hidden transition hover:-translate-y-0.5 break-inside-avoid"
+                >
+                  <Image
+                    src={item.src}
+                    alt={item.alt}
+                    fill
+                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                    className="object-cover transition duration-500 ease-out group-hover:scale-[1.06]"
+                    priority={item.id === "p1"}
+                  />
 
-                      {/* Hover overlay */}
-                      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-zinc-950/20 via-zinc-950/0 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                      <figcaption className="pointer-events-none absolute bottom-0 left-0 right-0 p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                        <p className="text-xs font-medium text-white/95 drop-shadow">
-                          {item.alt}
-                        </p>
-                      </figcaption>
-                    </figure>
-                  ))}
-                </div>
+                  {/* Hover overlay */}
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-zinc-950/20 via-zinc-950/0 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                  <figcaption className="pointer-events-none absolute bottom-0 left-0 right-0 p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                    <p className="text-xs font-medium text-white/95 drop-shadow">
+                      {item.alt}
+                    </p>
+                  </figcaption>
+                </figure>
               ))}
             </div>
           </section>

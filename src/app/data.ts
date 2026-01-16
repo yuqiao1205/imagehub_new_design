@@ -208,7 +208,7 @@ export const galleryItems: GalleryItem[] = [
     id: "p32",
     src: "https://artwork-hub.vercel.app/images/sheeps.jpg",
     alt: "Sheeps in the Field",
-    ratio: 1.2,
+    ratio: 0.8,
   },
   {
     id: "p33",
