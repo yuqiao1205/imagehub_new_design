@@ -110,7 +110,7 @@ export default function Home() {
 
                   {/* Hover overlay */}
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-zinc-950/20 via-zinc-950/0 to-transparent opacity-0 transition-opacity duration-300 sm:group-hover:opacity-100" />
-                  <figcaption className="pointer-events-none absolute bottom-0 left-0 right-0 p-4 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300">
+                  <figcaption className="pointer-events-none absolute bottom-0 left-0 right-0 p-4 opacity-0 transition-opacity duration-300 sm:group-hover:opacity-100">
                     <p className="text-xs font-medium text-white/95 drop-shadow">
                       {item.alt}
                     </p>
