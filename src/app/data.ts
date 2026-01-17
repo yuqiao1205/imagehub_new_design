@@ -329,6 +329,18 @@ export const galleryItems: GalleryItem[] = [
     alt: "different whales",
     ratio: 1.2,
   },
+  {
+    id: "p52",
+    src: "https://artwork-hub.vercel.app/images/hangingduck.jpg",
+    alt: "hanging duck",
+    ratio: 1.2,
+  },
+  {
+    id: "p53",
+    src: "https://artwork-hub.vercel.app/images/banana.jpg",
+    alt: "cute banana",
+    ratio: 1.2,
+  },
 
 
 
