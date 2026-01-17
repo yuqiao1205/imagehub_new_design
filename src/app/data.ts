@@ -177,7 +177,7 @@ export const galleryItems: GalleryItem[] = [
     id: "p27",
     src: "https://artwork-hub.vercel.app/images/nightview.jpg",
     alt: "Night View",
-    ratio: 1.5,
+    ratio: 1.2
   },
   {
     id: "p28",
@@ -190,7 +190,8 @@ export const galleryItems: GalleryItem[] = [
     id: "p29",
     src: "https://artwork-hub.vercel.app/images/redgirl.jpg",
     alt: "Girl in Red Coat",
-    ratio: 1.1,
+    
+    ratio: 0.7,
   },
   {
     id: "p30",
@@ -235,6 +236,94 @@ export const galleryItems: GalleryItem[] = [
     alt: "Red-frowned crane",
     ratio: 1.1,
   },
+  {
+    id: "p37",
+    src: "https://artwork-hub.vercel.app/images/animal.jpg",
+    alt: "Animal Friends",
+    ratio: 1.1,
+  },
+  {
+    id: "p38",
+    src: "https://artwork-hub.vercel.app/images/beach2.jpg",
+    alt: "Nice Beach",
+    ratio: 0.6,
+    objectFit: 'contain',
+  },
+  {
+    id: "p39",
+    src: "https://artwork-hub.vercel.app/images/bluehairgirls.jpg",
+    alt: "blue hair girl",
+    ratio: 1.2,
+  },
+  {
+    id: "p40",
+    src: "https://artwork-hub.vercel.app/images/fluffyball2.jpg",
+    alt: "fluffy ball friends",
+    ratio: 0.7,
+  },
+  {
+    id: "p41",
+    src: "https://artwork-hub.vercel.app/images/girlcarry.jpg",
+    alt: "girl carrying flowers",
+    ratio: 1.2,
+  },
+  {
+    id: "p42",
+    src: "https://artwork-hub.vercel.app/images/goodbear.jpg",
+    alt: "good bear",
+    ratio: 1.0,
+  },
+  {
+    id: "p43",
+    src: "https://artwork-hub.vercel.app/images/mansea.jpg",
+    alt: "man by the sea",
+    ratio: 1.2,
+  },
+  {
+    id: "p44",
+    src: "https://artwork-hub.vercel.app/images/nightview2.jpg",
+    alt: "peaceful night view",
+    ratio: 1.5,
+  },
+  {
+    id: "p45",
+    src: "https://artwork-hub.vercel.app/images/pinkbeach.jpg",
+    alt: "peaceful beach",
+    ratio: 1.5,
+  },
+  {
+    id: "p46",
+    src: "https://artwork-hub.vercel.app/images/sunset.jpg",
+    alt: "sunset view",
+    ratio: 1.2,
+  },
+  {
+    id: "p47",
+    src: "https://artwork-hub.vercel.app/images/watermelon.jpg",
+    alt: "duck swimming in watermelon pool",
+    ratio: 1.2,
+  },
+  {
+    id: "p48",
+    src: "https://artwork-hub.vercel.app/images/whitedog.jpg",
+    alt: "white dog",
+    ratio: 1.0,
+  },
+  {
+    id: "p49",
+    src: "https://artwork-hub.vercel.app/images/wintercabin.jpg",
+    alt: "man walking in winter cabin",
+    ratio: 1.1,
+  },
+  {
+    id: "p50",
+    src: "https://artwork-hub.vercel.app/images/yellowbeach.jpg",
+    alt: "Nice Beach",
+    ratio: 0.6,
+    objectFit: 'contain',
+  },
+
+
 
 
 
