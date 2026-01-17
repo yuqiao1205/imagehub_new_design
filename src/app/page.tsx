@@ -104,13 +104,13 @@ export default function Home() {
                     alt={item.alt}
                     fill
                     sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                    className="object-cover transition duration-500 ease-out group-hover:scale-[1.06]"
+                    className="object-cover transition duration-500 ease-out sm:group-hover:scale-[1.06]"
                     priority={item.id === "p1"}
                   />
 
                   {/* Hover overlay */}
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-zinc-950/20 via-zinc-950/0 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                  <figcaption className="pointer-events-none absolute bottom-0 left-0 right-0 p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-zinc-950/20 via-zinc-950/0 to-transparent opacity-0 transition-opacity duration-300 sm:group-hover:opacity-100" />
+                  <figcaption className="pointer-events-none absolute bottom-0 left-0 right-0 p-4 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300">
                     <p className="text-xs font-medium text-white/95 drop-shadow">
                       {item.alt}
                     </p>
