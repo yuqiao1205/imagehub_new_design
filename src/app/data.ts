@@ -11,6 +11,10 @@ export type GalleryItem = {
    * Object fit for the image: 'cover' or 'contain'.
    */
   objectFit?: 'cover' | 'contain';
+  /**
+   * Description for the image, used on single image pages.
+   */
+  description?: string;
 };
 
 // Pexels examples (you can swap/add more). We vary span + aspect for a dynamic layout.
@@ -21,131 +25,153 @@ export const galleryItems: GalleryItem[] = [
     src: "https://artwork-hub.vercel.app/images/catwithrain.jpg",
     alt: "Rainy Day Cat Parade",
     ratio: 1.5,
+    description: "A whimsical illustration of cats enjoying a rainy day, capturing the joy and playfulness in unexpected weather.",
   },
   {
     id: "p2",
     src: "https://artwork-hub.vercel.app/images/duckriver.jpg",
     alt: "Gentle Afternoon by the River",
+    description: "A serene scene of ducks gliding through a peaceful river, showcasing the beauty of nature in a quiet moment.",
     ratio: 0.9,
   },
   {
     id: "p3",
     src: "https://artwork-hub.vercel.app/images/farmer.jpg",
     alt: "River Through the Sheep Fields",
+    description: "A charming depiction of a river winding through a lush field of sheep, evoking a sense of tranquility and rural charm.",
     ratio: 1.2,
   },
   {
     id: "p4",
     src: "https://artwork-hub.vercel.app/images/fish.jpg",
     alt: "Goldfish Among the Water Lilies",
+    description: "A delicate illustration of goldfish swimming among water lilies, highlighting the delicate balance of aquatic life.",
     ratio: 0.85,
   },
   {
     id: "p5",
     src: "https://artwork-hub.vercel.app/images/flowers.jpg",
     alt: "Garden in Full Bloom",
+    description: "A vibrant portrayal of a garden bursting with colorful flowers, capturing the essence of spring and natural beauty.",
     ratio: 0.95,
   },
   {
     id: "p6",
     src: "https://artwork-hub.vercel.app/images/fluffyballs.jpg",
     alt: "Fluffy Friends Chatting",
+    description: "A playful scene of fluffy animals gathered together, sharing stories and laughter in a cozy setting.",
     ratio: 1.5,
   },
   {
     id: "p7",
     src: "https://artwork-hub.vercel.app/images/greendog.jpg",
     alt: "Pond Pals in Clover",
+    description: "A heartwarming illustration of dogs lounging by a pond, surrounded by lush greenery and golden sunlight.",
     ratio: 1.1,
   },
   {
     id: "p8",
     src: "https://artwork-hub.vercel.app/images/labubu.jpg",
     alt: "Purple Labubu Grin",
+    description: "A playful character named Labubu with a cheerful grin, embodying joy and mischief in a whimsical style.",
     ratio: 0.77,
   },
   {
     id: "p9",
     src: "https://artwork-hub.vercel.app/images/plant.jpg",
     alt: "Trees on the Sunny Hill",
+    description: "A peaceful landscape of trees standing tall on a sunny hill, reflecting the beauty of nature's harmony.",
     ratio: 1.56,
   },
   {
     id: "p10",
     src: "https://artwork-hub.vercel.app/images/redroofcat.jpg",
     alt: "Cat on the Autumn Roof",
+    description: "A cozy scene of a cat perched on a red roof, surrounded by autumn leaves and a warm, inviting atmosphere.",
     ratio: 1.1,
   },
   {
     id: "p11",
     src: "https://artwork-hub.vercel.app/images/sakura.jpg",
     alt: "Path Under the Cherry Blossoms",
+    description: "A serene path lined with cherry blossoms, creating a magical and ethereal atmosphere in the springtime.",
     ratio: 0.7,
   },
   {
     id: "p12",
     src: "https://artwork-hub.vercel.app/images/winter.jpg",
     alt: "Quiet Cabin in the Snow",
+    description: "A tranquil winter scene featuring a cozy cabin nestled in the snow, evoking warmth and solitude.",
     ratio: 0.77,
   },
   {
     id: "p13",
     src: "https://artwork-hub.vercel.app/images/sunsetcat.jpg",
     alt: "Dusk and the Cat",
+    description: "A beautiful sunset scene with a cat enjoying the golden hour, capturing the magic of twilight.",
     ratio: 1.0,
   },
   {
     id: "p14",
     src: "https://artwork-hub.vercel.app/images/shiba_frog.jpg",
     alt: "shiba and Frog Chat",
+    description: "A cute shiba and frog chatting",
     ratio: 0.8,
   },
   {
     id: "p15",
     src: "https://artwork-hub.vercel.app/images/pinkboy.jpg",
     alt: "Autumn Walk with a Dragon Friend",
+    description: "A charming autumn walk with a dragon friend, blending nature and fantasy in a delightful scene.",
     ratio: 1.45,
   },
   {
     id: "p16",
     src: "https://artwork-hub.vercel.app/images/autum.jpg",
     alt: "Colors of the Fall Canopy",
+    description: "Vibrant colors of the fall canopy, showcasing the beauty of autumn foliage in a breathtaking display.",
     ratio: 1.4,
   },
   {
     id: "p17",
     src: "https://artwork-hub.vercel.app/images/beach.jpg",
     alt: "Sailing Into Sunset Dreams",
+    description: "A peaceful sailing adventure into sunset dreams, capturing the serene beauty of a boat gliding across the water at dusk.",
     ratio: 0.65,
   },
   {
     id: "p18",
     src: "https://artwork-hub.vercel.app/images/bear.jpg",
     alt: "Surprised Cat and Cozy Reindeer",
+    description: "A surprised cat and a cozy reindeer sharing a moment of warmth and friendship in a whimsical setting.",
     ratio: 1.45,
   },
   {
     id: "p19",
     src: "https://artwork-hub.vercel.app/images/catplay.jpg",
     alt: "Sunset Swing With You",
+    description: "A romantic sunset swing with you, capturing the beauty of a couple enjoying a peaceful moment together.",
     ratio: 0.73,
   },
     {
     id: "p20",
     src: "https://artwork-hub.vercel.app/images/bag.jpg",
     alt: "Cute Bag",
+    description: "A cute bag",
     ratio: 1.11,
   },
   {
     id: "p21",
     src: "https://artwork-hub.vercel.app/images/cabin.jpg",
     alt: "Cabin in the Snow",
+    description: "A cabin in the snow",
     ratio: 0.9,
   },
   {
     id: "p22",
     src: "https://artwork-hub.vercel.app/images/dogcar.jpg",
     alt: "Dog Car Ride",
+    description: "A dog car ride",
     ratio: 1.0,
   },
   {
