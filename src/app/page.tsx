@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { galleryItems } from "./data";
 
 export default function Home() {
@@ -92,14 +93,13 @@ export default function Home() {
           </header>
 
           <section id="gallery" className="mt-10 scroll-mt-10">
-            <div className="columns-3 gap-3 md:gap-4 space-y-3 md:space-y-4">
+            <div className="columns-3 gap-10 md:gap-4 space-y-4 md:space-y-4">
               {galleryItems.map((item) => (
-                <figure
-                  key={item.id}
-                  style={{ aspectRatio: item.ratio }}
-                  className="group relative overflow-hidden transition hover:-translate-y-0.5 focus:-translate-y-0.5 break-inside-avoid"
-                  tabIndex={0}
-                >
+                <Link key={item.id} href={`/gallery/${item.id}`} className="block mb-4">
+                  <figure
+                    style={{ aspectRatio: item.ratio }}
+                    className="group relative overflow-hidden transition hover:-translate-y-0.5 focus:-translate-y-0.5 break-inside-avoid cursor-pointer p-6"
+                  >
                   <Image
                     src={item.src}
                     alt={item.alt}
@@ -117,6 +117,7 @@ export default function Home() {
                     </p>
                   </figcaption>
                 </figure>
+                </Link>
               ))}
             </div>
           </section>
