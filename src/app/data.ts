@@ -786,7 +786,7 @@ export const galleryItems: GalleryItem[] = [
     id: "p93",
     src: "https://artwork-hub.vercel.app/images/shipview.jpg",
     alt: "ship view",
-    ratio: 0.5,
+    ratio: 1.8,
     createtime: "2025-12-28",
     category: "landscape",
   },
