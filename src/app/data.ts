@@ -792,7 +792,7 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "p94",
-    src: "https://artwork-hub.vercel.app/images/mountainview.jpg",
+    src: "https://artwork-hub.vercel.app/images/moutainview.jpg",
     alt: "mountain view",
     ratio: 1.0,
     createtime: "2025-12-28",
