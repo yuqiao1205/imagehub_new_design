@@ -782,6 +782,38 @@ export const galleryItems: GalleryItem[] = [
     createtime: "2025-12-15",
     category: "landscape",
   },
+  {
+    id: "p93",
+    src: "https://artwork-hub.vercel.app/images/shipview.jpg",
+    alt: "ship view",
+    ratio: 0.5,
+    createtime: "2025-12-28",
+    category: "landscape",
+  },
+  {
+    id: "p94",
+    src: "https://artwork-hub.vercel.app/images/mountainview.jpg",
+    alt: "mountain view",
+    ratio: 1.0,
+    createtime: "2025-12-28",
+    category: "landscape",
+  },
+  {
+    id: "p95",
+    src: "https://artwork-hub.vercel.app/images/xianrenzhang.jpg",
+    alt: "plant leaf",
+    ratio: 1.0,
+    createtime: "2025-12-24",
+    category: "plant",
+  },
+  {
+    id: "p96",
+    src: "https://artwork-hub.vercel.app/images/sheepsplay.jpg",
+    alt: "sheeps playing",
+    ratio: 1.0,
+    createtime: "2025-12-28",
+    category: "animal",
+  },
   
 
 
