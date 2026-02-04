@@ -814,6 +814,14 @@ export const galleryItems: GalleryItem[] = [
     createtime: "2025-12-28",
     category: "animal",
   },
+  {
+    id: "p97",
+    src: "https://artwork-hub.vercel.app/images/catlookingfirework.jpg",
+    alt: "cat looking at firework",
+    ratio: 1.0,
+    createtime: "2026-1-6",
+    category: "animal",
+  },
   
 
 
