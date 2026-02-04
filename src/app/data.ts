@@ -499,6 +499,78 @@ export const galleryItems: GalleryItem[] = [
     alt: "white sheep",
     ratio: 1.0,
   },
+  {
+    id: "p76",
+    src: "https://artwork-hub.vercel.app/images/fengche.jpg",
+    alt: "windmill",
+    ratio: 1.0,
+  },
+  {
+    id: "p77",
+    src: "https://artwork-hub.vercel.app/images/guilin.jpg",
+    alt: "guilin landscape",
+    ratio: 1.0,
+  },
+  {
+    id: "p78",
+    src: "https://artwork-hub.vercel.app/images/colorfulcloth.jpg",
+    alt: "a girl with colorful cloth",
+    ratio: 1.3,
+  },
+  {
+    id: "p79",
+    src: "https://artwork-hub.vercel.app/images/yellowgirl.jpg",
+    alt: "a girl in yellow dress",
+    ratio: 1.0,
+  },
+  {
+    id: "p80",
+    src: "https://artwork-hub.vercel.app/images/catlookfish.jpg",
+    alt: "a cat looking at fish",
+    ratio: 0.9,
+  },
+  {
+    id: "p81",
+    src: "https://artwork-hub.vercel.app/images/mermid.jpg",
+    alt: "mermid",
+    ratio: 1.1,
+  },
+  {
+    id: "p82",
+    src: "https://artwork-hub.vercel.app/images/sunflower.jpg",
+    alt: "sunflower growing",
+    ratio: 1.0,
+  },
+  {
+    id: "p83",
+    src: "https://artwork-hub.vercel.app/images/yellowflower.jpg",
+    alt: "yellow flower with house",
+    ratio: 1.5,
+  },
+  {
+    id: "p84",
+    src: "https://artwork-hub.vercel.app/images/denglong.jpg",
+    alt: "red lanterns",
+    ratio: 1.0,
+  },
+  {
+    id: "p85",
+    src: "https://artwork-hub.vercel.app/images/moon.jpg",
+    alt: "full moon night",
+    ratio: 0.7,
+  },
+  {
+    id: "p86",
+    src: "https://artwork-hub.vercel.app/images/catfish.jpg",
+    alt: "cat and fish",
+    ratio: 1.0,
+  },
+  {
+    id: "p87",
+    src: "https://artwork-hub.vercel.app/images/bluegirl.jpg",
+    alt: "blue hair girl",
+    ratio: 1.0,
+  },
   
 
 
