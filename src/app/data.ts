@@ -235,6 +235,7 @@ export const galleryItems: GalleryItem[] = [
     alt: "Child with Goose",
     ratio: 1.1,
     createtime: "2025-12-15",
+    category: "animal",
   },
   {
     id: "p25",
@@ -242,6 +243,7 @@ export const galleryItems: GalleryItem[] = [
     alt: "Many Cats Gathered",
     ratio: 0.96,
     createtime: "2025-12-15",
+    category: "animal",
   },
   {
     id: "p26",

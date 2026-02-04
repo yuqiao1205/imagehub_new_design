@@ -1,9 +1,37 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useState, useMemo, useEffect } from "react";
 import { galleryItems } from "./data";
 
 export default function Home() {
-  const baseItems = [...galleryItems].sort(() => Math.random() - 0.5);
+  const [sortBy, setSortBy] = useState('random');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
+
+  const categories = Array.from(new Set(galleryItems.map(item => item.category).filter(cat => cat !== undefined))).sort();
+
+  const sortedItems = useMemo(() => {
+    if (!mounted) {
+      return [...galleryItems].sort((a, b) => a.id.localeCompare(b.id));
+    }
+    let items = [...galleryItems];
+    if (sortBy === 'category' && selectedCategory !== 'all') {
+      items = items.filter(item => item.category === selectedCategory);
+    }
+    if (sortBy === 'time') {
+      return items.sort((a, b) => new Date(a.createtime).getTime() - new Date(b.createtime).getTime());
+    }
+    if (sortBy === 'category') {
+      return items.sort((a, b) => (a.category || '').localeCompare(b.category || ''));
+    }
+    return items.sort(() => Math.random() - 0.5);
+  }, [sortBy, selectedCategory, mounted]);
+
+  const baseItems = sortedItems;
 
   // Ensure the layout always renders full rows of 3.
   const items = [...baseItems];
@@ -93,8 +121,35 @@ export default function Home() {
           </header>
 
           <section id="gallery" className="mt-10 scroll-mt-10">
-            <div className="columns-3 gap-10 md:gap-4 space-y-4 md:space-y-4">
-              {galleryItems.map((item) => (
+            <div className="mb-4">
+              <label className="block text-sm font-medium text-zinc-950 mb-2">Sort by:</label>
+              <select
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value)}
+                className="px-3 py-2 border border-zinc-300 rounded-md bg-white text-zinc-950"
+              >
+                <option value="random">Random</option>
+                <option value="time">Creation Time</option>
+                <option value="category">Category</option>
+              </select>
+              {sortBy === 'category' && (
+                <div className="mt-2">
+                  <label className="block text-sm font-medium text-zinc-950 mb-2">Select Category:</label>
+                  <select
+                    value={selectedCategory}
+                    onChange={(e) => setSelectedCategory(e.target.value)}
+                    className="px-3 py-2 border border-zinc-300 rounded-md bg-white text-zinc-950"
+                  >
+                    <option value="all">All Categories</option>
+                    {categories.map(cat => (
+                      <option key={cat} value={cat}>{cat.charAt(0).toUpperCase() + cat.slice(1)}</option>
+                    ))}
+                  </select>
+                </div>
+              )}
+            </div>
+            <div className="columns-3 gap-6 md:gap-8 space-y-4 md:space-y-6">
+              {items.map((item) => (
                 <Link key={item.id} href={`/gallery/${item.id}`} className="block mb-4">
                   <figure
                     style={{ aspectRatio: item.ratio }}
