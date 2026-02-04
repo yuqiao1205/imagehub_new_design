@@ -318,10 +318,10 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "p35",
-    src: "https://artwork-hub.vercel.app/images/twocats.jpg",
-    alt: "Two Cats Sitting",
+    src: "https://artwork-hub.vercel.app/images/twocatswithmoon.jpg",
+    alt: "Two Cats Sitting under the Moon",
     ratio: 1.1,
-    createtime: "2025-12-24",
+    createtime: "2025-12-21",
     category: "animal",
   },
   {
