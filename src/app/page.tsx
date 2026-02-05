@@ -78,7 +78,14 @@ export default function Home() {
         >
           <div className="flex items-center justify-between border-b border-zinc-200 px-6 py-5">
             <div className="space-y-0.5">
-              <p className="text-sm font-semibold tracking-tight text-zinc-900">Image Hub</p>
+              <a
+                href="https://artwork-hub.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-semibold tracking-tight text-zinc-900 hover:underline"
+              >
+                Image Hub
+              </a>
               <p className="text-xs text-zinc-600">Modern, light, and dynamic.</p>
             </div>
             <button
@@ -153,9 +160,14 @@ export default function Home() {
             </button>
 
             <div className="space-y-1">
-              <p className="text-sm font-semibold tracking-tight text-zinc-900">
+              <a
+                href="https://artwork-hub.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-semibold tracking-tight text-zinc-900 hover:underline"
+              >
                 Image Hub
-              </p>
+              </a>
               <p className="text-sm text-zinc-600">
                 Modern, light, and dynamic.
               </p>
@@ -199,7 +211,7 @@ export default function Home() {
           <div className="mt-8 rounded-2xl border border-zinc-200/70 bg-white p-4">
             <p className="text-sm font-medium text-zinc-900">Tip</p>
             <p className="mt-1 text-sm leading-6 text-zinc-600">
-              Hover any image for a subtle lift + zoom.
+              Hover over any image for a subtle lift and zoom on desktop.
             </p>
           </div>
 
