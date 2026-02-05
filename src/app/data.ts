@@ -422,7 +422,7 @@ export const galleryItems: GalleryItem[] = [
     alt: "duck swimming in watermelon pool",
     ratio: 1.2,
     createtime: "2026-1-3",
-    category: "animal",
+    category: "fruit",
   },
   {
     id: "p48",
@@ -823,6 +823,14 @@ export const galleryItems: GalleryItem[] = [
     ratio: 1.0,
     createtime: "2026-1-6",
     category: "animal",
+  },
+  {
+    id: "p98",
+    src: "https://artwork-hub.vercel.app/images/humans.jpg",
+    alt: "different humans",
+    ratio: 1.0,
+    createtime: "2025-12-23",
+    category: "figure",
   },
   
 
