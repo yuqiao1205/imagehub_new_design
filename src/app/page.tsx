@@ -1,6 +1,7 @@
 "use client";
 
-import Image from "next/image";
+/* eslint-disable @next/next/no-img-element */
+
 import Link from "next/link";
 import { useState, useMemo, useEffect } from "react";
 import { galleryItems } from "./data";
@@ -307,13 +308,11 @@ export default function Home() {
                     style={{ aspectRatio: item.ratio }}
                     className="group relative overflow-hidden transition hover:-translate-y-0.5 focus:-translate-y-0.5 break-inside-avoid cursor-pointer p-6"
                   >
-                  <Image
+                  <img
                     src={item.src}
                     alt={item.alt}
-                    fill
-                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                    className="object-cover transition duration-500 ease-out group-hover:scale-[1.06] group-focus:scale-[1.06]"
-                    priority={item.id === "p1"}
+                    loading={item.id === "p1" ? "eager" : "lazy"}
+                    className="absolute inset-0 h-full w-full object-cover transition duration-500 ease-out group-hover:scale-[1.06] group-focus:scale-[1.06]"
                   />
 
                   {/* Hover overlay */}

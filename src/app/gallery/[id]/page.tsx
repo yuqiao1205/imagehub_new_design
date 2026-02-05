@@ -1,4 +1,5 @@
-import Image from "next/image";
+/* eslint-disable @next/next/no-img-element */
+
 import Link from "next/link";
 import { galleryItems } from "../../data";
 import { notFound } from "next/navigation";
@@ -31,13 +32,13 @@ export default async function ImagePage({ params }: PageProps) {
 
         <div className="flex flex-col items-center">
           <figure className="relative mb-6 overflow-hidden rounded-lg shadow-lg">
-            <Image
+            <img
               src={item.src}
               alt={item.alt}
               width={800}
               height={600}
-              className="object-contain"
-              priority
+              loading="eager"
+              className="h-auto w-full object-contain"
             />
           </figure>
 
