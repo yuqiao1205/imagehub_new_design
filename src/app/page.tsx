@@ -9,14 +9,16 @@ export default function Home() {
   const [sortBy, setSortBy] = useState('random');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortOrder, setSortOrder] = useState('asc');
-  const [mounted, setMounted] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(false);
   const [randomSeed, setRandomSeed] = useState<number>(1);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
-    // Seed used for deterministic "random" sorting without calling Math.random during render.
-    setRandomSeed(Date.now());
+    // Re-seed *after* initial render to avoid SSR/client hydration mismatch.
+    const t = window.setTimeout(() => {
+      setRandomSeed(Date.now());
+    }, 0);
+    return () => window.clearTimeout(t);
   }, []);
 
   const seededRandom = (seed: number) => {
@@ -32,9 +34,6 @@ export default function Home() {
   const categories = Array.from(new Set(galleryItems.map(item => item.category).filter(cat => cat !== undefined))).sort();
 
   const sortedItems = useMemo(() => {
-    if (!mounted) {
-      return [...galleryItems].sort((a, b) => a.id.localeCompare(b.id));
-    }
     let items = [...galleryItems];
     if (selectedCategory !== 'all') {
       items = items.filter(item => item.category === selectedCategory);
@@ -44,7 +43,7 @@ export default function Home() {
     }
     const rand = seededRandom(randomSeed);
     return items.sort(() => rand() - 0.5);
-  }, [sortBy, selectedCategory, sortOrder, mounted, randomSeed]);
+  }, [sortBy, selectedCategory, sortOrder, randomSeed]);
 
   const baseItems = sortedItems;
 
@@ -55,10 +54,105 @@ export default function Home() {
     <div className="min-h-screen bg-zinc-50 text-zinc-950">
       <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(900px_circle_at_20%_20%,rgba(99,102,241,0.12),transparent_60%),radial-gradient(900px_circle_at_70%_30%,rgba(16,185,129,0.10),transparent_55%),radial-gradient(800px_circle_at_80%_80%,rgba(236,72,153,0.08),transparent_55%)]" />
 
+      {/* Mobile drawer */}
+      <div
+        className={`fixed inset-0 z-50 md:hidden ${mobileMenuOpen ? "pointer-events-auto" : "pointer-events-none"}`}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Menu"
+        aria-hidden={!mobileMenuOpen}
+      >
+        <button
+          type="button"
+          aria-label="Close menu"
+          onClick={() => setMobileMenuOpen(false)}
+          className={`absolute inset-0 bg-zinc-950/30 backdrop-blur-sm transition-opacity duration-200 ${
+            mobileMenuOpen ? "opacity-100" : "opacity-0"
+          }`}
+        />
+
+        <div
+          className={`absolute left-0 top-0 h-full w-80 max-w-[85vw] bg-white shadow-xl transition-transform duration-200 ease-out will-change-transform ${
+            mobileMenuOpen ? "translate-x-0" : "-translate-x-full"
+          }`}
+        >
+          <div className="flex items-center justify-between border-b border-zinc-200 px-6 py-5">
+            <div className="space-y-0.5">
+              <p className="text-sm font-semibold tracking-tight text-zinc-900">Image Hub</p>
+              <p className="text-xs text-zinc-600">Modern, light, and dynamic.</p>
+            </div>
+            <button
+              type="button"
+              aria-label="Close menu"
+              onClick={() => setMobileMenuOpen(false)}
+              className="inline-flex items-center justify-center rounded-xl border border-zinc-200 bg-white px-3 py-2 text-zinc-800 shadow-sm shadow-zinc-900/5 transition hover:bg-zinc-50"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M6 6L18 18M18 6L6 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+              </svg>
+            </button>
+          </div>
+
+          <div className="px-6 py-6">
+            <a
+              href="#gallery"
+              onClick={() => setMobileMenuOpen(false)}
+              className="inline-flex w-full items-center justify-center rounded-full bg-zinc-900 px-4 py-2 text-sm font-medium text-white shadow-sm shadow-zinc-900/10 transition hover:bg-zinc-800"
+            >
+              View Gallery
+            </a>
+
+            <nav className="mt-6">
+              <p className="text-xs font-medium uppercase tracking-wider text-zinc-500">Menu</p>
+              <ul className="mt-3 space-y-2">
+                {[
+                  { label: "Gallery", href: "#gallery" },
+                  { label: "About", href: "#about" },
+                  { label: "Contact", href: "#contact" },
+                ].map((l) => (
+                  <li key={l.href}>
+                    <a
+                      href={l.href}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="group flex items-center justify-between rounded-xl border border-transparent px-3 py-2 text-sm font-medium text-zinc-800 transition hover:border-zinc-200 hover:bg-white"
+                    >
+                      <span>{l.label}</span>
+                      <span
+                        className="text-zinc-400 transition group-hover:translate-x-0.5 group-hover:text-zinc-600"
+                        aria-hidden="true"
+                      >
+                        →
+                      </span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+
       <div className="relative mx-auto flex min-h-screen max-w-7xl flex-col md:flex-row">
         {/* Left sidebar */}
         <aside className="border-b border-zinc-200/70 bg-white/70 px-6 py-6 backdrop-blur md:sticky md:top-0 md:h-screen md:w-80 md:border-b-0 md:border-r">
-          <div className="flex items-center justify-between md:block">
+          <div className="flex items-center gap-3 md:block">
+            <button
+              type="button"
+              aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={mobileMenuOpen}
+              onClick={() => setMobileMenuOpen((v) => !v)}
+              className="inline-flex items-center justify-center rounded-xl border border-zinc-200 bg-white px-3 py-2 text-zinc-800 shadow-sm shadow-zinc-900/5 transition hover:bg-zinc-50 md:hidden"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path
+                  d={mobileMenuOpen ? "M6 6L18 18M18 6L6 18" : "M4 7H20M4 12H20M4 17H20"}
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </button>
+
             <div className="space-y-1">
               <p className="text-sm font-semibold tracking-tight text-zinc-900">
                 Image Hub
@@ -76,7 +170,7 @@ export default function Home() {
             </a>
           </div>
 
-          <nav className="mt-6">
+          <nav className="mt-6 hidden md:block">
             <p className="text-xs font-medium uppercase tracking-wider text-zinc-500">
               Menu
             </p>
