@@ -440,15 +440,7 @@ export const galleryItems: GalleryItem[] = [
     createtime: "2025-12-18",
     category: "landscape",
   },
-  {
-    id: "p50",
-    src: "https://artwork-hub.vercel.app/images/yellowbeach.jpg",
-    alt: "Nice Beach",
-    ratio: 0.65,
-    objectFit: 'contain',
-    createtime: "2026-1-13",
-    category: "landscape",
-  },
+
   {
     id: "p51",
     src: "https://artwork-hub.vercel.app/images/whales.jpg",
