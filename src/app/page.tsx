@@ -8,9 +8,26 @@ import { galleryItems } from "./data";
 export default function Home() {
   const [sortBy, setSortBy] = useState('random');
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [sortOrder, setSortOrder] = useState('asc');
   const [mounted, setMounted] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(false);
+  const [randomSeed, setRandomSeed] = useState<number>(1);
 
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    setMounted(true);
+    // Seed used for deterministic "random" sorting without calling Math.random during render.
+    setRandomSeed(Date.now());
+  }, []);
+
+  const seededRandom = (seed: number) => {
+    // mulberry32 PRNG
+    return () => {
+      let t = (seed += 0x6d2b79f5);
+      t = Math.imul(t ^ (t >>> 15), t | 1);
+      t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    };
+  };
 
   const categories = Array.from(new Set(galleryItems.map(item => item.category).filter(cat => cat !== undefined))).sort();
 
@@ -19,17 +36,15 @@ export default function Home() {
       return [...galleryItems].sort((a, b) => a.id.localeCompare(b.id));
     }
     let items = [...galleryItems];
-    if (sortBy === 'category' && selectedCategory !== 'all') {
+    if (selectedCategory !== 'all') {
       items = items.filter(item => item.category === selectedCategory);
     }
     if (sortBy === 'time') {
-      return items.sort((a, b) => new Date(a.createtime).getTime() - new Date(b.createtime).getTime());
+      return items.sort((a, b) => sortOrder === 'asc' ? new Date(a.createtime).getTime() - new Date(b.createtime).getTime() : new Date(b.createtime).getTime() - new Date(a.createtime).getTime());
     }
-    if (sortBy === 'category') {
-      return items.sort((a, b) => (a.category || '').localeCompare(b.category || ''));
-    }
-    return items.sort(() => Math.random() - 0.5);
-  }, [sortBy, selectedCategory, mounted]);
+    const rand = seededRandom(randomSeed);
+    return items.sort(() => rand() - 0.5);
+  }, [sortBy, selectedCategory, sortOrder, mounted, randomSeed]);
 
   const baseItems = sortedItems;
 
@@ -41,10 +56,6 @@ export default function Home() {
     items.push({ ...source, id: `${source.id}-pad-${pad}` });
     pad += 1;
   }
-
-  const rows = Array.from({ length: Math.ceil(items.length / 3) }, (_, idx) =>
-    items.slice(idx * 3, idx * 3 + 3)
-  );
 
   return (
     <div className="min-h-screen bg-zinc-50 text-zinc-950">
@@ -113,7 +124,7 @@ export default function Home() {
         <main className="flex-1 px-6 py-10 md:px-10">
           <header className="max-w-3xl">
             <h1 className="text-pretty text-3xl font-semibold tracking-tight text-zinc-950 md:text-4xl">
-              Lauren's Dynamic Art Gallery
+              Lauren&apos;s Dynamic Art Gallery
             </h1>
             <p className="mt-3 text-pretty text-base leading-7 text-zinc-600">
               An evolving collection of hand-drawn artworks, digital experiments, and creative illustrations
@@ -123,30 +134,71 @@ export default function Home() {
           <section id="gallery" className="mt-10 scroll-mt-10">
             <div className="mb-4">
               <label className="block text-sm font-medium text-zinc-950 mb-2">Sort by:</label>
-              <select
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
-                className="px-3 py-2 border border-zinc-300 rounded-md bg-white text-zinc-950"
-              >
-                <option value="random">Random</option>
-                <option value="time">Creation Time</option>
-                <option value="category">Category</option>
-              </select>
-              {sortBy === 'category' && (
-                <div className="mt-2">
-                  <label className="block text-sm font-medium text-zinc-950 mb-2">Select Category:</label>
-                  <select
-                    value={selectedCategory}
-                    onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="px-3 py-2 border border-zinc-300 rounded-md bg-white text-zinc-950"
-                  >
-                    <option value="all">All Categories</option>
-                    {categories.map(cat => (
-                      <option key={cat} value={cat}>{cat.charAt(0).toUpperCase() + cat.slice(1)}</option>
-                    ))}
-                  </select>
-                </div>
-              )}
+              <div className="relative">
+                <button
+                  onClick={() => { setOpenDropdown(!openDropdown); }}
+                  className="px-3 py-2 border border-zinc-300 rounded-md bg-white text-zinc-950 text-left flex justify-between items-center"
+                >
+                  <span>
+                    {sortBy === 'random'
+                      ? 'Random'
+                      : sortOrder === 'desc'
+                        ? 'Newest → Oldest'
+                        : 'Oldest → Newest'}
+                  </span>
+                  <span>▼</span>
+                </button>
+                {openDropdown && (
+                  <div className="absolute top-full left-0 bg-white border border-zinc-300 rounded-md mt-1 z-10 w-max">
+                    <div
+                      onClick={() => { setRandomSeed(Date.now()); setSortBy('random'); setOpenDropdown(false); }}
+                      className="px-3 py-2 hover:bg-zinc-100 cursor-pointer"
+                    >
+                      Random
+                    </div>
+                    <div
+                      onClick={() => { setSortBy('time'); setSortOrder('desc'); setOpenDropdown(false); }}
+                      className="px-3 py-2 hover:bg-zinc-100 cursor-pointer"
+                    >
+                      Newest → Oldest
+                    </div>
+                    <div
+                      onClick={() => { setSortBy('time'); setSortOrder('asc'); setOpenDropdown(false); }}
+                      className="px-3 py-2 hover:bg-zinc-100 cursor-pointer"
+                    >
+                      Oldest → Newest
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+
+            <div className="mb-6">
+              <label className="block text-sm font-medium text-zinc-950 mb-2">Filter by category:</label>
+              <div role="radiogroup" className="flex flex-wrap gap-3">
+                <label className="inline-flex items-center gap-2 rounded-md border border-zinc-300 bg-white px-3 py-2 text-sm text-zinc-950 cursor-pointer">
+                  <input
+                    type="radio"
+                    name="category"
+                    value="all"
+                    checked={selectedCategory === 'all'}
+                    onChange={() => setSelectedCategory('all')}
+                  />
+                  <span>All</span>
+                </label>
+                {categories.map((cat) => (
+                  <label key={cat} className="inline-flex items-center gap-2 rounded-md border border-zinc-300 bg-white px-3 py-2 text-sm text-zinc-950 cursor-pointer">
+                    <input
+                      type="radio"
+                      name="category"
+                      value={cat}
+                      checked={selectedCategory === cat}
+                      onChange={() => setSelectedCategory(cat)}
+                    />
+                    <span>{cat.charAt(0).toUpperCase() + cat.slice(1)}</span>
+                  </label>
+                ))}
+              </div>
             </div>
             <div className="columns-3 gap-6 md:gap-8 space-y-4 md:space-y-6">
               {items.map((item) => (
