@@ -84,9 +84,9 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="text-sm font-semibold tracking-tight text-zinc-900 hover:underline"
               >
-                Image Hub
+                Lauren&apos;s Art Gallery
               </a>
-              <p className="text-xs text-zinc-600">Modern, light, and dynamic.</p>
+              <p className="text-xs text-zinc-600">Modern,Light,Dynamic</p>
             </div>
             <button
               type="button"
@@ -166,7 +166,9 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="text-sm font-semibold tracking-tight text-zinc-900 hover:underline"
               >
-                Image Hub
+                  <h2 className="text-pretty text-3xl font-semibold tracking-tight text-zinc-950 md:text-4xl">
+              Lauren&apos;s Dynamic Art Gallery
+            </h2>
               </a>
               <p className="text-sm text-zinc-600">
                 Modern, light, Van Gogh–inspired art collection.
@@ -219,11 +221,13 @@ export default function Home() {
         {/* Right main */}
         <main className="flex-1 px-6 py-10 md:px-10">
           <header className="max-w-3xl">
-            <h1 className="text-pretty text-3xl font-semibold tracking-tight text-zinc-950 md:text-4xl">
+            {/* <h1 className="text-pretty text-3xl font-semibold tracking-tight text-zinc-950 md:text-4xl">
               Lauren&apos;s Dynamic Art Gallery
-            </h1>
-            <p className="mt-3 text-pretty text-base leading-7 text-zinc-600">
-              An evolving collection of hand-drawn artworks, digital experiments, and creative illustrations
+            </h1> */}
+            <p className="mt-4 max-w-prose border-l border-zinc-200 pl-4 text-pretty text-base leading-7 text-zinc-600">
+              Welcome to a living collection of <span className="font-medium text-zinc-900">hand-drawn artworks</span>,
+              <span className="font-medium text-zinc-900"> digital experiments</span>, and playful illustrationseach piece a small story.
+              Browse, filter, and come back oftennew work appears over time, so there&apos;s always something fresh to discover.
             </p>
           </header>
 
