@@ -106,7 +106,6 @@ export default function Home() {
               <p className="text-xs font-medium uppercase tracking-wider text-zinc-500">Menu</p>
               <ul className="mt-3 space-y-2">
                 {[
-                  { label: "Gallery", href: "#gallery" },
                   { label: "About", href: "#about" },
                   { label: "Contact", href: "#contact" },
                 ].map((l) => (
@@ -176,7 +175,6 @@ export default function Home() {
             </p>
             <ul className="mt-3 space-y-2">
               {[
-                { label: "Gallery", href: "#gallery" },
                 { label: "About", href: "#about" },
                 { label: "Contact", href: "#contact" },
               ].map((l) => (
