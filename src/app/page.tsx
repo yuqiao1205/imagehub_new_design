@@ -48,14 +48,8 @@ export default function Home() {
 
   const baseItems = sortedItems;
 
-  // Ensure the layout always renders full rows of 3.
-  const items = [...baseItems];
-  let pad = 0;
-  while (items.length % 3 !== 0) {
-    const source = baseItems[pad % baseItems.length];
-    items.push({ ...source, id: `${source.id}-pad-${pad}` });
-    pad += 1;
-  }
+  // Do not pad with duplicates; padding caused repeated images to appear in category filters.
+  const items = baseItems;
 
   return (
     <div className="min-h-screen bg-zinc-50 text-zinc-950">

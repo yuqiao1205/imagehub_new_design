@@ -628,7 +628,7 @@ export const galleryItems: GalleryItem[] = [
     id: "p73",
     src: "https://artwork-hub.vercel.app/images/socks.jpg",
     alt: "hanging socks",
-    ratio: 1.05,
+    ratio: 1.0,
     createtime: "2026-1-14",
     category: "object",
   },
@@ -887,6 +887,14 @@ export const galleryItems: GalleryItem[] = [
     ratio: 1.0,
     createtime: "2026-1-1",
     category: "fruit",
+  },
+  {
+    id: "p106",
+    src: "https://artwork-hub.vercel.app/images/newyear.jpg",
+    alt: "new year 2026",
+    ratio: 1.0,
+    createtime: "2026-1-1",
+    category: "figure",
   },
 
   
