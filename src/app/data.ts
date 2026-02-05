@@ -39,7 +39,7 @@ export const galleryItems: GalleryItem[] = [
     description: "A serene scene of ducks gliding through a peaceful river, showcasing the beauty of nature in a quiet moment.",
     ratio: 0.9,
     createtime: "2024-12-24",
-    category: "landscape",
+    category: "animal",
   },
   {
     id: "p3",
