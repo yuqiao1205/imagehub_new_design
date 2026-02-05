@@ -226,8 +226,8 @@ export default function Home() {
             </h1> */}
             <p className="mt-4 max-w-prose border-l border-zinc-200 pl-4 text-pretty text-base leading-7 text-zinc-600">
               Welcome to a living collection of <span className="font-medium text-zinc-900">hand-drawn artworks</span>,
-              <span className="font-medium text-zinc-900"> digital experiments</span>, and playful illustrationseach piece a small story.
-              Browse, filter, and come back oftennew work appears over time, so there&apos;s always something fresh to discover.
+              <span className="font-medium text-zinc-900"> digital experiments</span>, and playful illustrations each piece a small story.
+              Browse, filter, and come back often new work appears over time, so there&apos;s always something fresh to discover.
             </p>
           </header>
 
