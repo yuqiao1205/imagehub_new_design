@@ -169,7 +169,7 @@ export default function Home() {
                 Image Hub
               </a>
               <p className="text-sm text-zinc-600">
-                Modern, light, and dynamic.
+                Modern, light, Van Gogh–inspired art collection.
               </p>
             </div>
 
@@ -208,14 +208,12 @@ export default function Home() {
             </ul>
           </nav>
 
-          <div className="mt-8 rounded-2xl border border-zinc-200/70 bg-white p-4">
+          <div className="mt-8 hidden rounded-2xl border border-zinc-200/70 bg-white p-4 md:block">
             <p className="text-sm font-medium text-zinc-900">Tip</p>
             <p className="mt-1 text-sm leading-6 text-zinc-600">
               Hover over any image for a subtle lift and zoom on desktop.
             </p>
           </div>
-
-          <p className="mt-6 text-xs text-zinc-500">© {new Date().getFullYear()} Image Hub</p>
         </aside>
 
         {/* Right main */}
