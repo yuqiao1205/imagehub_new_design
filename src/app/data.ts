@@ -921,7 +921,7 @@ export const galleryItems: GalleryItem[] = [
     src: "https://artwork-hub.vercel.app/images/redcatholdtree.jpg",
     alt: "a red cat holding a tree",
     ratio: 1.02,
-    createtime: "2026-02-06",
+    createtime: "2025-12-19",
     category: "animal",
   },
 
