@@ -34,7 +34,7 @@ Then open http://localhost:3000
 
 This repo includes a converter script and an agent “skill” that can fully automate the process.
 
-### 1) Convert HEIC files
+### 1. Convert HEIC files
 
 Put `.heic` files into your waiting folder and run:
 
@@ -52,13 +52,13 @@ If you need a different directory, set `WAITING_DIR`:
 WAITING_DIR="/path/to/your/waiting" npm run heic:convert
 ```
 
-### 2) Move JPGs into the app
+### 2. Move JPGs into the app
 
 Copy new `.jpg` files into:
 
 - `public/images/`
 
-### 3) Register images in the gallery
+### 3. Register images in the gallery
 
 Add a new entry to the `galleryItems` array in `src/app/data.ts`:
 
