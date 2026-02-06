@@ -889,7 +889,61 @@ export const galleryItems: GalleryItem[] = [
     category: "figure",
   },
 
-  
+  {
+    id: "p107",
+    src: "https://artwork-hub.vercel.app/images/tank.jpg",
+    alt: "tank",
+    ratio: 1.0,
+    createtime: "2026-2-5",
+    category: "object",
+  },
+
+  {
+    id: "p108",
+    src: "https://artwork-hub.vercel.app/images/awhitesheep.jpg",
+    alt: "a white sheep",
+    ratio: 1.07,
+    createtime: "2026-02-06",
+    category: "animal",
+  },
+
+  {
+    id: "p109",
+    src: "https://artwork-hub.vercel.app/images/aguineapig.jpg",
+    alt: "a guinea pig",
+    ratio: 0.88,
+    createtime: "2026-02-06",
+    category: "animal",
+  },
+
+  {
+    id: "p110",
+    src: "https://artwork-hub.vercel.app/images/redcatholdtree.jpg",
+    alt: "a red cat holding a tree",
+    ratio: 1.02,
+    createtime: "2026-02-06",
+    category: "animal",
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
