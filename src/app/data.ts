@@ -921,9 +921,65 @@ export const galleryItems: GalleryItem[] = [
     src: "https://artwork-hub.vercel.app/images/redcatholdtree.jpg",
     alt: "a red cat holding a tree",
     ratio: 1.02,
-    createtime: "2025-12-19",
+    createtime: "2026-02-06",
     category: "animal",
   },
+
+  {
+    id: "p111",
+    src: "https://artwork-hub.vercel.app/images/daisy.jpg",
+    alt: "daisy",
+    ratio: 1.01,
+    createtime: "2026-02-06",
+    category: "plant",
+  },
+
+  {
+    id: "p112",
+    src: "https://artwork-hub.vercel.app/images/daisyview.jpg",
+    alt: "pink daisy view",
+    ratio: 0.51,
+    createtime: "2026-02-08",
+    category: "plant",
+  },
+
+  {
+    id: "p113",
+    src: "https://artwork-hub.vercel.app/images/gateview.jpg",
+    alt: "gate view",
+    ratio: 0.98,
+    createtime: "2026-02-08",
+    category: "landscape",
+  },
+
+  {
+    id: "p114",
+    src: "https://artwork-hub.vercel.app/images/greenview.jpg",
+    alt: "green view",
+    ratio: 1.02,
+    createtime: "2026-02-08",
+    category: "landscape",
+  },
+
+  {
+    id: "p115",
+    src: "https://artwork-hub.vercel.app/images/newyearnightview.jpg",
+    alt: "new year night view",
+    ratio: 0.54,
+    createtime: "2026-02-08",
+    category: "landscape",
+  },
+
+  {
+    id: "p116",
+    src: "https://artwork-hub.vercel.app/images/springviewhouse.jpg",
+    alt: "spring view house",
+    ratio: 0.49,
+    createtime: "2026-02-08",
+    category: "landscape",
+  },
+
+
 
 
 
