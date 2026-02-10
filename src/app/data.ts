@@ -1034,7 +1034,7 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "p123",
-    src: "https://artwork-hub.vercel.app/images/fujiwindowview.jpg",
+    src: "https://artwork-hub.vercel.app/images/fujiview.jpg",
     alt: "window view with fuji",
     ratio: 1.0,
     createtime: "2026-02-10",
