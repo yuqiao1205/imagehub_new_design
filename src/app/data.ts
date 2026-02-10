@@ -1040,6 +1040,14 @@ export const galleryItems: GalleryItem[] = [
     createtime: "2026-02-10",
     category: "landscape",
   },
+  {
+    id: "p124",
+    src: "https://artwork-hub.vercel.app/images/s.jpg",
+    alt: "s word",
+    ratio: 1.0,
+    createtime: "2025-12-27",
+    category: "object",
+  },
 
 
 
