@@ -1017,7 +1017,7 @@ export const galleryItems: GalleryItem[] = [
 
   {
     id: "p121",
-    src: "https://artwork-hub.vercel.app/images/windowmoutainview.jpg",
+    src: "https://artwork-hub.vercel.app/images/windowmoutainview1.jpg",
     alt: "window moutain view",
     ratio: 1.0,
     createtime: "2026-02-10",
