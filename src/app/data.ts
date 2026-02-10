@@ -371,7 +371,7 @@ export const galleryItems: GalleryItem[] = [
     id: "p41",
     src: "https://artwork-hub.vercel.app/images/girlcarry.jpg",
     alt: "girl carrying flowers",
-    ratio: 1.18,
+    ratio: 0.7,
     createtime: "2026-1-2",
     category: "figure",
   },
