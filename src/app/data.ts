@@ -288,7 +288,7 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "p31",
-    src: "https://artwork-hub.vercel.app/images/sheeppatern.jpg",
+    src: "https://artwork-hub.vercel.app/images/sheeppattern.jpg",
     alt: "Yellow Sheep Pattern",
     ratio: 1.1,
     createtime: "2025-12-19",
