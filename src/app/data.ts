@@ -46,7 +46,7 @@ export const galleryItems: GalleryItem[] = [
     src: "https://artwork-hub.vercel.app/images/farmer.jpg",
     alt: "River Through the Sheep Fields",
     description: "A charming depiction of a river winding through a lush field of sheep, evoking a sense of tranquility and rural charm.",
-    ratio: 1.2,
+    ratio: 0.7,
     createtime: "2024-12-24",
     category: "landscape",
   },
