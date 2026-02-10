@@ -979,6 +979,68 @@ export const galleryItems: GalleryItem[] = [
     category: "landscape",
   },
 
+  {
+    id: "p117",
+    src: "https://artwork-hub.vercel.app/images/catwantsfish.jpg",
+    alt: "cat wants fish",
+    ratio: 1.0,
+    createtime: "2026-02-10",
+    category: "animal",
+  },
+
+  {
+    id: "p118",
+    src: "https://artwork-hub.vercel.app/images/girlstandingrass.jpg",
+    alt: "girl in grass",
+    ratio: 1.0,
+    createtime: "2026-02-10",
+    category: "figure",
+  },
+
+  {
+    id: "p119",
+    src: "https://artwork-hub.vercel.app/images/ladder.jpg",
+    alt: "ladder",
+    ratio: 1.0,
+    createtime: "2026-02-10",
+    category: "object",
+  },
+
+  {
+    id: "p120",
+    src: "https://artwork-hub.vercel.app/images/willowwithboat.jpg",
+    alt: "willow with boat",
+    ratio: 1.0,
+    createtime: "2026-02-10",
+    category: "landscape",
+  },
+
+  {
+    id: "p121",
+    src: "https://artwork-hub.vercel.app/images/windowmoutainview.jpg",
+    alt: "window moutain view",
+    ratio: 1.0,
+    createtime: "2026-02-10",
+    category: "landscape",
+  },
+
+  {
+    id: "p122",
+    src: "https://artwork-hub.vercel.app/images/winterplum.jpg",
+    alt: "winter plum",
+    ratio: 1.0,
+    createtime: "2026-02-10",
+    category: "plant",
+  },
+  {
+    id: "p123",
+    src: "https://artwork-hub.vercel.app/images/fujiwindowview.jpg",
+    alt: "window view with fuji",
+    ratio: 1.0,
+    createtime: "2026-02-10",
+    category: "landscape",
+  },
+
 
 
 
