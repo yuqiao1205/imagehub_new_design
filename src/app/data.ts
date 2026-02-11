@@ -701,7 +701,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p74",
     src: "https://artwork-hub.vercel.app/images/whitecatstar.jpg",
-    tag: "cat",
+    tag: "cat with star",
     alt: "cat is playing with star",
     ratio: 1.08,
     createtime: "2026-1-14",
