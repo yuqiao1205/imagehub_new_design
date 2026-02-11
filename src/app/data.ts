@@ -1157,7 +1157,7 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "p123",
-    src: "https://artwork-hub.vercel.app/images/fujiview.jpg",
+    src: "https://artwork-hub.vercel.app/images/fujiview1.jpg",
     tag: "fuji mountain",
     alt: "window view with fuji",
     ratio: 0.6,
