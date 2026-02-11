@@ -3,8 +3,11 @@
 /* eslint-disable @next/next/no-img-element */
 
 import Link from "next/link";
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, useRef, useCallback } from "react";
 import { galleryItems } from "./data";
+
+// Pagination config
+const ITEMS_PER_PAGE = 12;
 
 export default function Home() {
   const [sortBy, setSortBy] = useState('random');
@@ -14,6 +17,11 @@ export default function Home() {
   const [randomSeed, setRandomSeed] = useState<number>(1);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+  
+  // Infinite scroll state
+  const [displayedCount, setDisplayedCount] = useState(ITEMS_PER_PAGE);
+  const [isLoading, setIsLoading] = useState(false);
+  const loadMoreRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Re-seed *after* initial render to avoid SSR/client hydration mismatch.
@@ -22,6 +30,11 @@ export default function Home() {
     }, 0);
     return () => window.clearTimeout(t);
   }, []);
+
+  // Reset displayed count when filters change
+  useEffect(() => {
+    setDisplayedCount(ITEMS_PER_PAGE);
+  }, [searchQuery, selectedCategory, sortBy, sortOrder, randomSeed]);
 
   const seededRandom = (seed: number) => {
     // mulberry32 PRNG
@@ -62,7 +75,43 @@ export default function Home() {
     return items.sort(() => rand() - 0.5);
   }, [sortBy, selectedCategory, sortOrder, randomSeed, searchQuery]);
 
-  const baseItems = sortedItems;
+  // Get currently displayed items
+  const displayedItems = sortedItems.slice(0, displayedCount);
+
+  // IntersectionObserver for infinite scroll
+  const loadMoreItems = useCallback(() => {
+    if (isLoading || displayedCount >= sortedItems.length) return;
+    
+    setIsLoading(true);
+    // Simulate loading delay for smooth experience
+    setTimeout(() => {
+      setDisplayedCount(prev => Math.min(prev + ITEMS_PER_PAGE, sortedItems.length));
+      setIsLoading(false);
+    }, 150);
+  }, [isLoading, displayedCount, sortedItems.length]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && displayedCount < sortedItems.length) {
+          loadMoreItems();
+        }
+      },
+      {
+        root: null,
+        rootMargin: '200px', // Load before reaching bottom
+        threshold: 0.1
+      }
+    );
+
+    if (loadMoreRef.current) {
+      observer.observe(loadMoreRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [loadMoreItems, displayedCount, sortedItems.length]);
+
+  const baseItems = displayedItems;
 
   // Do not pad with duplicates; padding caused repeated images to appear in category filters.
   const items = baseItems;
@@ -101,7 +150,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="text-sm font-semibold tracking-tight text-zinc-900 hover:underline"
               >
-                Lauren&apos;s Art Gallery
+                Lauren's Art Gallery
               </a>
               <p className="text-xs text-zinc-600">Modern,Light,Dynamic</p>
             </div>
@@ -184,7 +233,7 @@ export default function Home() {
                 className="text-sm font-semibold tracking-tight text-zinc-900 hover:underline"
               >
                   <h2 className="text-pretty text-3xl font-semibold tracking-tight text-zinc-950 md:text-4xl">
-              Lauren&apos;s Dynamic Art Gallery
+              Lauren's Dynamic Art Gallery
             </h2>
               </a>
               <p className="text-sm text-zinc-600">
@@ -239,12 +288,12 @@ export default function Home() {
         <main className="flex-1 px-6 py-10 md:px-10">
           <header className="max-w-3xl">
             {/* <h1 className="text-pretty text-3xl font-semibold tracking-tight text-zinc-950 md:text-4xl">
-              Lauren&apos;s Dynamic Art Gallery
+              Lauren's Dynamic Art Gallery
             </h1> */}
             <p className="mt-4 max-w-prose border-l border-zinc-200 pl-4 text-pretty text-base leading-7 text-zinc-600">
               Welcome to a living collection of <span className="font-medium text-zinc-900">hand-drawn artworks</span>,
               <span className="font-medium text-zinc-900"> digital experiments</span>, and playful illustrations each piece a small story.
-              Browse, filter, and come back often new work appears over time, so there&apos;s always something fresh to discover.
+              Browse, filter, and come back often new work appears over time, so there's always something fresh to discover.
             </p>
           </header>
 
@@ -374,7 +423,7 @@ export default function Home() {
                 <>
                   {searchQuery && (
                     <div className="col-span-full text-sm text-zinc-500 mb-2">
-                      Found {items.length} item{items.length !== 1 ? 's' : ''} for "{searchQuery}"
+                      Showing {displayedItems.length} of {sortedItems.length} items for "{searchQuery}"
                     </div>
                   )}
                   {items.map((item) => (
@@ -386,7 +435,7 @@ export default function Home() {
                       <img
                         src={item.src}
                         alt={item.alt}
-                        loading={item.id === "p1" ? "eager" : "lazy"}
+                        loading="lazy"
                         className="absolute inset-0 h-full w-full object-cover transition duration-500 ease-out group-hover:scale-[1.06] group-focus:scale-[1.06]"
                       />
 
@@ -405,6 +454,20 @@ export default function Home() {
                     </figure>
                     </Link>
                   ))}
+                  
+                  {/* Infinite scroll trigger */}
+                  <div ref={loadMoreRef} className="col-span-full">
+                    {displayedCount < sortedItems.length && (
+                      <div className="flex justify-center py-6">
+                        <span className="text-zinc-400 text-sm animate-pulse">Load More...</span>
+                      </div>
+                    )}
+                    {displayedCount >= sortedItems.length && sortedItems.length > 0 && (
+                      <div className="text-center py-6 text-zinc-400 text-sm">
+                        You've seen all {sortedItems.length} items
+                      </div>
+                    )}
+                  </div>
                 </>
               )}
             </div>
