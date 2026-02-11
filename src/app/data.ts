@@ -284,7 +284,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p27",
     src: "https://artwork-hub.vercel.app/images/nightview.jpg",
-    tag: "night",
+    tag: "nightview with trees and sky",
     alt: "Night View",
     ratio: 1.0,
     createtime: "2025-12-31",
@@ -373,10 +373,10 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "p37",
-    src: "https://artwork-hub.vercel.app/images/hedgehog_racon.jpg",
-    tag: "hedgehog",
+    src: "https://artwork-hub.vercel.app/images/racon.jpg",
+    tag: "raccoon",
     alt: "Animal Friends",
-    ratio: 0.45,
+    ratio: 1.0,
     createtime: "2025-12-22",
     category: "animal",
   },
@@ -1200,6 +1200,16 @@ export const galleryItems: GalleryItem[] = [
     createtime: "2026-02-10",
     category: "plant",
   },
+  {
+    id: "p128",
+    src: "https://artwork-hub.vercel.app/images/ciwei.jpg",
+    tag: "hedgehog",
+    alt: "cute hedgehog",
+    ratio: 0.8,
+    createtime: "2025-12-22",
+    category: "animal",
+  }
+
 
 
 
