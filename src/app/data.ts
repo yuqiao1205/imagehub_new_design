@@ -1019,7 +1019,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p109",
     src: "https://artwork-hub.vercel.app/images/aguineapig.jpg",
-    tag: "guinea-pig",
+    tag: "guineapig",
     alt: "a guinea pig",
     ratio: 0.88,
     createtime: "2026-02-06",
@@ -1089,7 +1089,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p116",
     src: "https://artwork-hub.vercel.app/images/springviewhouse.jpg",
-    tag: "house",
+    tag: "house spring",
     alt: "spring view house",
     ratio: 0.49,
     createtime: "2026-02-08",
