@@ -17,6 +17,7 @@ export type GalleryItem = {
   description?: string;
   createtime: string;
   category?: string;
+  tag?: string;
   
 };
 
@@ -30,6 +31,7 @@ export const galleryItems: GalleryItem[] = [
     ratio: 1.5,
     createtime: "2024-12-24",
     category: "animal",
+    tag: "cat",
     description: "A whimsical illustration of cats enjoying a rainy day, capturing the joy and playfulness in unexpected weather.",
   },
   {
@@ -40,6 +42,7 @@ export const galleryItems: GalleryItem[] = [
     ratio: 0.9,
     createtime: "2024-12-24",
     category: "animal",
+    tag: "duck",
   },
   {
     id: "p3",
@@ -49,6 +52,7 @@ export const galleryItems: GalleryItem[] = [
     ratio: 0.7,
     createtime: "2024-12-24",
     category: "landscape",
+    tag: "sheep",
   },
   {
     id: "p4",
@@ -58,11 +62,13 @@ export const galleryItems: GalleryItem[] = [
     ratio: 0.85,
     createtime: "2024-12-20",
     category: "animal",
+    tag: "fish",
   },
   {
     id: "p5",
     src: "https://artwork-hub.vercel.app/images/flowers.jpg",
     alt: "Garden in Full Bloom",
+    tag: "flower",
     description: "A vibrant portrayal of a garden bursting with colorful flowers, capturing the essence of spring and natural beauty.",
     ratio: 0.95,
     createtime: "2024-12-22",
@@ -72,6 +78,7 @@ export const galleryItems: GalleryItem[] = [
     id: "p6",
     src: "https://artwork-hub.vercel.app/images/fluffyballs.jpg",
     alt: "Fluffy Friends Chatting",
+    tag: "fluffy",
     description: "A playful scene of fluffy animals gathered together, sharing stories and laughter in a cozy setting.",
     ratio: 1.75,
     createtime: "2024-12-24",
@@ -81,6 +88,7 @@ export const galleryItems: GalleryItem[] = [
     id: "p7",
     src: "https://artwork-hub.vercel.app/images/greendog.jpg",
     alt: "Pond Pals in Clover",
+    tag: "dog",
     description: "A heartwarming illustration of dogs lounging by a pond, surrounded by lush greenery and golden sunlight.",
     ratio: 1.1,
     createtime: "2024-12-23",
@@ -90,6 +98,7 @@ export const galleryItems: GalleryItem[] = [
     id: "p8",
     src: "https://artwork-hub.vercel.app/images/labubu.jpg",
     alt: "Purple Labubu Grin",
+    tag: "labubu",
     description: "A playful character named Labubu with a cheerful grin, embodying joy and mischief in a whimsical style.",
     ratio: 0.68,
     createtime: "2024-12-17",
@@ -99,6 +108,7 @@ export const galleryItems: GalleryItem[] = [
     id: "p9",
     src: "https://artwork-hub.vercel.app/images/plant.jpg",
     alt: "Trees on the Sunny Hill",
+    tag: "tree",
     description: "A peaceful landscape of trees standing tall on a sunny hill, reflecting the beauty of nature's harmony.",
     ratio: 1.56,
     createtime: "2024-12-21",
@@ -108,6 +118,7 @@ export const galleryItems: GalleryItem[] = [
     id: "p10",
     src: "https://artwork-hub.vercel.app/images/redroofcat.jpg",
     alt: "Cat on the Autumn Roof",
+    tag: "cat",
     description: "A cozy scene of a cat perched on a red roof, surrounded by autumn leaves and a warm, inviting atmosphere.",
     ratio: 1.1,
     createtime: "2024-12-23",
@@ -117,6 +128,7 @@ export const galleryItems: GalleryItem[] = [
     id: "p11",
     src: "https://artwork-hub.vercel.app/images/sakura.jpg",
     alt: "Path Under the Cherry Blossoms",
+    tag: "sakura",
     description: "A serene path lined with cherry blossoms, creating a magical and ethereal atmosphere in the springtime.",
     ratio: 0.7,
     createtime: "2024-12-17",
@@ -126,6 +138,7 @@ export const galleryItems: GalleryItem[] = [
     id: "p12",
     src: "https://artwork-hub.vercel.app/images/winter.jpg",
     alt: "Quiet Cabin in the Snow",
+    tag: "cabin",
     description: "A tranquil winter scene featuring a cozy cabin nestled in the snow, evoking warmth and solitude.",
     ratio: 0.77,
     createtime: "2024-12-10",
@@ -135,6 +148,7 @@ export const galleryItems: GalleryItem[] = [
     id: "p13",
     src: "https://artwork-hub.vercel.app/images/sunsetcat.jpg",
     alt: "Dusk and the Cat",
+    tag: "cat",
     description: "A beautiful sunset scene with a cat enjoying the golden hour, capturing the magic of twilight.",
     ratio: 1.0,
     createtime: "2024-12-23",
@@ -144,6 +158,7 @@ export const galleryItems: GalleryItem[] = [
     id: "p14",
     src: "https://artwork-hub.vercel.app/images/shiba_frog.jpg",
     alt: "shiba and Frog Chat",
+    tag: "shiba",
     description: "A cute shiba and frog chatting",
     ratio: 0.8,
     createtime: "2024-12-15",
@@ -153,6 +168,7 @@ export const galleryItems: GalleryItem[] = [
     id: "p15",
     src: "https://artwork-hub.vercel.app/images/pinkboy.jpg",
     alt: "Autumn Walk with a Dragon Friend",
+    tag: "dragon",
     description: "A charming autumn walk with a dragon friend, blending nature and fantasy in a delightful scene.",
     ratio: 1.45,
     createtime: "2024-12-18",
@@ -162,6 +178,7 @@ export const galleryItems: GalleryItem[] = [
     id: "p16",
     src: "https://artwork-hub.vercel.app/images/autum.jpg",
     alt: "Colors of the Fall Canopy",
+    tag: "autumn",
     description: "Vibrant colors of the fall canopy, showcasing the beauty of autumn foliage in a breathtaking display.",
     ratio: 1.4,
     createtime: "2024-12-20",
@@ -171,6 +188,7 @@ export const galleryItems: GalleryItem[] = [
     id: "p17",
     src: "https://artwork-hub.vercel.app/images/beach.jpg",
     alt: "Sailing Into Sunset Dreams",
+    tag: "beach",
     description: "A peaceful sailing adventure into sunset dreams, capturing the serene beauty of a boat gliding across the water at dusk.",
     ratio: 0.65,
     createtime: "2024-12-17",
@@ -180,6 +198,7 @@ export const galleryItems: GalleryItem[] = [
     id: "p18",
     src: "https://artwork-hub.vercel.app/images/bear.jpg",
     alt: "Surprised Cat and Cozy Reindeer",
+    tag: "bear",
     description: "A surprised cat and a cozy reindeer sharing a moment of warmth and friendship in a whimsical setting.",
     ratio: 1.45,
     createtime: "2024-12-22",
@@ -189,6 +208,7 @@ export const galleryItems: GalleryItem[] = [
     id: "p19",
     src: "https://artwork-hub.vercel.app/images/catplay.jpg",
     alt: "Sunset Swing With You",
+    tag: "cat",
     description: "A romantic sunset swing with you, capturing the beauty of a couple enjoying a peaceful moment together.",
     ratio: 0.73,
     createtime: "2024-12-19",
@@ -198,6 +218,7 @@ export const galleryItems: GalleryItem[] = [
     id: "p20",
     src: "https://artwork-hub.vercel.app/images/bag.jpg",
     alt: "Cute Bag",
+    tag: "bag",
     description: "A cute bag",
     ratio: 1.11,
     createtime: "2025-12-23",
@@ -207,6 +228,7 @@ export const galleryItems: GalleryItem[] = [
     id: "p21",
     src: "https://artwork-hub.vercel.app/images/cabin.jpg",
     alt: "Cabin in the Snow",
+    tag: "cabin",
     description: "A cabin in the snow",
     ratio: 0.9,
     createtime: "2025-12-19",
@@ -216,6 +238,7 @@ export const galleryItems: GalleryItem[] = [
     id: "p22",
     src: "https://artwork-hub.vercel.app/images/dogcar.jpg",
     alt: "Dog Car Ride",
+    tag: "dog",
     description: "A dog car ride",
     ratio: 1.0,
     createtime: "2026-1-3",
@@ -224,6 +247,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p23",
     src: "https://artwork-hub.vercel.app/images/ducksleep.jpg",
+    tag: "duck",
     alt: "Duck sleeping",
     ratio: 1.0,
     createtime: "2025-12-20",
@@ -232,6 +256,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p24",
     src: "https://artwork-hub.vercel.app/images/goose.jpg",
+    tag: "goose",
     alt: "Child with Goose",
     ratio: 1.1,
     createtime: "2025-12-15",
@@ -240,6 +265,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p25",
     src: "https://artwork-hub.vercel.app/images/manycats.jpg",
+    tag: "cat",
     alt: "Many Cats Gathered",
     ratio: 0.96,
     createtime: "2025-12-15",
@@ -248,6 +274,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p26",
     src: "https://artwork-hub.vercel.app/images/moutain.jpg",
+    tag: "mountain",
     alt: "Moutain View",
     ratio: 0.65,
     objectFit: 'contain',
@@ -257,6 +284,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p27",
     src: "https://artwork-hub.vercel.app/images/nightview.jpg",
+    tag: "night",
     alt: "Night View",
     ratio: 1.0,
     createtime: "2025-12-31",
@@ -265,6 +293,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p28",
     src: "https://artwork-hub.vercel.app/images/phonebox.jpg",
+    tag: "phonebox",
     alt: "London Phone Box",
     ratio: 0.53,
     objectFit: 'contain',
@@ -274,6 +303,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p29",
     src: "https://artwork-hub.vercel.app/images/redgirl.jpg",
+    tag: "girl",
     alt: "Girl in Red Coat",
     ratio: 0.7,
     createtime: "2025-12-25",
@@ -282,6 +312,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p30",
     src: "https://artwork-hub.vercel.app/images/sakura2.jpg",
+    tag: "sakura",
     alt: "sakura with clouds",
     ratio: 1.0,
     createtime: "2025-12-17",
@@ -289,6 +320,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p31",
     src: "https://artwork-hub.vercel.app/images/sheeppattern.jpg",
+    tag: "sheep",
     alt: "Yellow Sheep Pattern",
     ratio: 1.1,
     createtime: "2025-12-19",
@@ -297,6 +329,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p32",
     src: "https://artwork-hub.vercel.app/images/sheeps.jpg",
+    tag: "sheep",
     alt: "Sheeps in the Field",
     ratio: 1.05,
     createtime: "2025-12-25",
@@ -305,6 +338,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p33",
     src: "https://artwork-hub.vercel.app/images/snowman2.jpg",
+    tag: "snowman",
     alt: "Snowman with Scarf",
     ratio: 0.94,
     createtime: "2025-12-17",
@@ -312,6 +346,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p34",
     src: "https://artwork-hub.vercel.app/images/snowtemple.jpg",
+    tag: "temple",
     alt: "Snow Temple",
     ratio: 0.35,
     objectFit: 'contain',
@@ -321,6 +356,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p35",
     src: "https://artwork-hub.vercel.app/images/twocatswithmoon.jpg",
+    tag: "cat",
     alt: "Two Cats Sitting under the Moon",
     ratio: 1.1,
     createtime: "2025-12-21",
@@ -329,6 +365,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p36",
     src: "https://artwork-hub.vercel.app/images/whitebird.jpg",
+    tag: "crane",
     alt: "Red-frowned crane",
     ratio: 0.98,
     createtime: "2025-12-30",
@@ -337,6 +374,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p37",
     src: "https://artwork-hub.vercel.app/images/animal.jpg",
+    tag: "animal",
     alt: "Animal Friends",
     ratio: 0.45,
     createtime: "2025-12-22",
@@ -345,6 +383,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p38",
     src: "https://artwork-hub.vercel.app/images/beach2.jpg",
+    tag: "beach",
     alt: "Nice Beach",
     ratio: 0.48,
     objectFit: 'contain',
@@ -354,6 +393,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p39",
     src: "https://artwork-hub.vercel.app/images/bluehairgirls.jpg",
+    tag: "girl",
     alt: "blue hair girl",
     ratio: 1.2,
     createtime: "2026-1-5",
@@ -362,6 +402,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p40",
     src: "https://artwork-hub.vercel.app/images/fluffyball2.jpg",
+    tag: "fluffy",
     alt: "fluffy ball friends",
     ratio: 0.8,
     createtime: "2026-1-2",
@@ -370,6 +411,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p41",
     src: "https://artwork-hub.vercel.app/images/girlcarry.jpg",
+    tag: "girl",
     alt: "girl carrying flowers",
     ratio: 0.7,
     createtime: "2026-1-2",
@@ -378,6 +420,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p42",
     src: "https://artwork-hub.vercel.app/images/goodbear.jpg",
+    tag: "bear",
     alt: "good bear",
     ratio: 1.0,
     createtime: "2026-1-3",
@@ -386,6 +429,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p43",
     src: "https://artwork-hub.vercel.app/images/mansea.jpg",
+    tag: "sea",
     alt: "man by the sea",
     ratio: 1.1,
     createtime: "2025-12-22",
@@ -394,6 +438,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p44",
     src: "https://artwork-hub.vercel.app/images/nightview2.jpg",
+    tag: "night",
     alt: "peaceful night view",
     createtime: "2025-12-29",
     ratio: 1.5,
@@ -402,6 +447,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p45",
     src: "https://artwork-hub.vercel.app/images/pinkbeach.jpg",
+    tag: "beach",
     alt: "peaceful beach",
     objectFit: 'contain',
     ratio: 1.2,
@@ -411,6 +457,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p46",
     src: "https://artwork-hub.vercel.app/images/sunset.jpg",
+    tag: "sunset",
     alt: "sunset view",
     ratio: 1.2,
     createtime: "2025-12-18",
@@ -419,6 +466,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p47",
     src: "https://artwork-hub.vercel.app/images/watermelon.jpg",
+    tag: "watermelon",
     alt: "duck swimming in watermelon pool",
     ratio: 1.2,
     createtime: "2026-1-3",
@@ -427,6 +475,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p48",
     src: "https://artwork-hub.vercel.app/images/whitedog.jpg",
+    tag: "dog",
     alt: "white dog",
     ratio: 1.1,
     createtime: "2025-12-27",
@@ -435,6 +484,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p49",
     src: "https://artwork-hub.vercel.app/images/wintercabin.jpg",
+    tag: "cabin",
     alt: "man walking in winter cabin",
     ratio: 1.15,
     createtime: "2025-12-18",
@@ -444,6 +494,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p51",
     src: "https://artwork-hub.vercel.app/images/whales.jpg",
+    tag: "whale",
     alt: "different whales",
     ratio: 1.2,
     createtime: "2026-1-4",
@@ -452,6 +503,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p52",
     src: "https://artwork-hub.vercel.app/images/hangingduck.jpg",
+    tag: "duck",
     alt: "hanging duck",
     ratio: 1.2,
     createtime: "2025-12-15",
@@ -459,15 +511,16 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p53",
     src: "https://artwork-hub.vercel.app/images/banana.jpg",
+    tag: "banana",
     alt: "cute banana",
     ratio: 1.2,
     createtime: "2025-12-15",
-    category: "fruit",
   },
   {
     id: "p54",
     src: "https://artwork-hub.vercel.app/images/beach3.jpg",
     alt: "nice beach view",
+    tag: "beach",
     ratio: 1.2,
     createtime: "2025-12-21",
     category: "landscape",
@@ -477,13 +530,14 @@ export const galleryItems: GalleryItem[] = [
     src: "https://artwork-hub.vercel.app/images/blackdoor.jpg",
     alt: "black door",
     ratio: 1.1,
+    tag: "door",
     createtime: "2025-12-21",
-    category: "plant",
   },
   {
     id: "p56",
     src: "https://artwork-hub.vercel.app/images/boysleep.jpg",
     alt: "boy sleeping",
+    tag: "boy",
     ratio: 0.98,
     createtime: "2026-1-7",
     category: "figure",
@@ -491,6 +545,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p57",
     src: "https://artwork-hub.vercel.app/images/boysplay.jpg",
+    tag: "boy",
     alt: "chase butterflies",
     ratio: 1.0,
     createtime: "2026-1-5",
@@ -499,6 +554,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p58",
     src: "https://artwork-hub.vercel.app/images/colorsheep.jpg",
+    tag: "sheep",
     alt: "sheep with colorful wool",
     ratio: 1.0,
     createtime: "2026-1-6",
@@ -508,6 +564,7 @@ export const galleryItems: GalleryItem[] = [
     id: "p59",
     src: "https://artwork-hub.vercel.app/images/doggrass.jpg",
     alt: "dog in the grass",
+    tag: "dog",
     ratio: 1.1,
     createtime: "2026-1-5",
     category: "animal",
@@ -516,6 +573,7 @@ export const galleryItems: GalleryItem[] = [
     id: "p60",
     src: "https://artwork-hub.vercel.app/images/dogrunning.jpg",
     alt: "dog running",
+    tag: "dog",
     ratio: 1.0,
     createtime: "2026-1-8",
     category: "animal",
@@ -524,6 +582,7 @@ export const galleryItems: GalleryItem[] = [
     id: "p61",
     src: "https://artwork-hub.vercel.app/images/dogsleep.jpg",
     alt: "dog is sleeping",
+    tag: "dog",
     ratio: 1.0,
     createtime: "2026-1-4",
     category: "animal",
@@ -532,6 +591,7 @@ export const galleryItems: GalleryItem[] = [
     id: "p62",
     src: "https://artwork-hub.vercel.app/images/girlcat.jpg",
     alt: "girl is sitting with cat",
+    tag: "girl",
     ratio: 1.4,
     createtime: "2026-1-6",
     category: "figure",
@@ -540,6 +600,7 @@ export const galleryItems: GalleryItem[] = [
     id: "p63",
     src: "https://artwork-hub.vercel.app/images/girlhat.jpg",
     alt: "girl with hat",
+    tag: "girl",
     ratio: 0.82,
     createtime: "2026-1-5",
     category: "figure",
@@ -548,6 +609,7 @@ export const galleryItems: GalleryItem[] = [
     id: "p64",
     src: "https://artwork-hub.vercel.app/images/girlsmile.jpg",
     alt: "girl is smiling",
+    tag: "girl",
     ratio: 1.0,
     createtime: "2026-1-9",
     category: "figure",
@@ -556,6 +618,7 @@ export const galleryItems: GalleryItem[] = [
     id: "p65",
     src: "https://artwork-hub.vercel.app/images/horse.jpg",
     alt: "horse in the field",
+    tag: "horse",
     ratio: 0.45,
     createtime: "2026-1-13",
     category: "animal",
@@ -564,6 +627,7 @@ export const galleryItems: GalleryItem[] = [
     id: "p66",
     src: "https://artwork-hub.vercel.app/images/horse2026.jpg",
     alt: "horse celebration 2026",
+    tag: "horse",
     ratio: 1.3,
     createtime: "2026-1-7",
     category: "animal",
@@ -572,22 +636,23 @@ export const galleryItems: GalleryItem[] = [
     id: "p67",
     src: "https://artwork-hub.vercel.app/images/jiqimao.jpg",
     alt: "machine cat",
+    tag: "cat",
     ratio: 1.0,
     createtime: "2026-1-5",
-    category: "animal",
   },
   {
     id: "p68",
     src: "https://artwork-hub.vercel.app/images/lamp.jpg",  
     alt: "lamp",
+    tag: "lamp",
     ratio: 0.9,
     createtime: "2026-1-5",
-    category: "object",
   },
   {
     id: "p69",
     src: "https://artwork-hub.vercel.app/images/pinkcat.jpg",
     alt: "cat with glasses",
+    tag: "cat",
     ratio: 1.1,
     createtime: "2026-1-4",
     category: "animal",
@@ -595,6 +660,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p70",
     src: "https://artwork-hub.vercel.app/images/planewindow.jpg",
+    tag: "window",
     alt: "window seat view",
     ratio: 1.0,
     createtime: "2026-1-6",
@@ -603,6 +669,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p71",
     src: "https://artwork-hub.vercel.app/images/sakuratree.jpg",
+    tag: "sakura",
     alt: "sakura tree",
     ratio: 1.5,
     createtime: "2026-1-6",
@@ -611,6 +678,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p72",
     src: "https://artwork-hub.vercel.app/images/snowcabin.jpg",
+    tag: "cabin",
     alt: "cabins in the snow",
     ratio: 1.0,
     createtime: "2026-1-7",
@@ -619,6 +687,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p73",
     src: "https://artwork-hub.vercel.app/images/socks.jpg",
+    tag: "sock",
     alt: "hanging socks",
     ratio: 1.0,
     createtime: "2026-1-14",
@@ -627,6 +696,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p74",
     src: "https://artwork-hub.vercel.app/images/whitecatstar.jpg",
+    tag: "cat",
     alt: "cat is playing with star",
     ratio: 1.08,
     createtime: "2026-1-14",
@@ -635,6 +705,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p75",
     src: "https://artwork-hub.vercel.app/images/whitesheep.jpg",
+    tag: "sheep",
     alt: "white sheep",
     ratio: 1.0,
     createtime: "2026-1-11",
@@ -643,6 +714,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p76",
     src: "https://artwork-hub.vercel.app/images/fengche.jpg",
+    tag: "windmill",
     alt: "windmill",
     ratio: 1.0,
     createtime: "2026-1-17",
@@ -651,6 +723,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p77",
     src: "https://artwork-hub.vercel.app/images/guilin.jpg",
+    tag: "guilin",
     alt: "guilin landscape",
     ratio: 1.0,
     createtime: "2026-1-17",
@@ -659,6 +732,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p78",
     src: "https://artwork-hub.vercel.app/images/colorfulcloth.jpg",
+    tag: "girl",
     alt: "a girl with colorful cloth",
     ratio: 1.3,
     createtime: "2026-1-17",
@@ -667,6 +741,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p79",
     src: "https://artwork-hub.vercel.app/images/yellowgirl.jpg",
+    tag: "girl",
     alt: "a girl in yellow dress",
     ratio: 1.0,
     createtime: "2026-1-30",
@@ -675,6 +750,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p80",
     src: "https://artwork-hub.vercel.app/images/catlookfish.jpg",
+    tag: "cat",
     alt: "a cat looking at fish",
     ratio: 0.9,
     createtime: "2026-1-31",
@@ -683,6 +759,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p81",
     src: "https://artwork-hub.vercel.app/images/mermid.jpg",
+    tag: "mermaid",
     alt: "mermid",
     ratio: 1,
     createtime: "2026-1-31",
@@ -691,6 +768,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p82",
     src: "https://artwork-hub.vercel.app/images/sunflower.jpg",
+    tag: "sunflower",
     alt: "sunflower growing",
     ratio: 1.0,
     createtime: "2026-2-2",
@@ -699,6 +777,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p83",
     src: "https://artwork-hub.vercel.app/images/yellowflower.jpg",
+    tag: "flower",
     alt: "yellow flower with house",
     ratio: 1.5,
     createtime: "2026-2-2",
@@ -707,6 +786,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p84",
     src: "https://artwork-hub.vercel.app/images/denglong.jpg",
+    tag: "lantern",
     alt: "red lanterns",
     ratio: 1.0,
     createtime: "2026-2-3",
@@ -715,6 +795,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p85",
     src: "https://artwork-hub.vercel.app/images/moon.jpg",
+    tag: "moon",
     alt: "full moon night",
     ratio: 0.7,
     createtime: "2026-2-3",
@@ -723,6 +804,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p86",
     src: "https://artwork-hub.vercel.app/images/catfish.jpg",
+    tag: "cat",
     alt: "cat and fish",
     ratio: 1.0,
     createtime: "2026-2-3",
@@ -731,6 +813,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p87",
     src: "https://artwork-hub.vercel.app/images/bluegirl.jpg",
+    tag: "girl",
     alt: "blue hair girl",
     ratio: 1.0,
     createtime: "2026-2-3",
@@ -739,6 +822,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p88",
     src: "https://artwork-hub.vercel.app/images/park.jpg",
+    tag: "park",
     alt: "park view",
     ratio: 0.6,
     createtime: "2025-12-19",
@@ -747,6 +831,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p89",
     src: "https://artwork-hub.vercel.app/images/snail.jpg",
+    tag: "snail",
     alt: "cute snail",
     ratio: 1.0,
     createtime: "2025-12-19",
@@ -755,6 +840,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p90",
     src: "https://artwork-hub.vercel.app/images/twocats.jpg",
+    tag: "cat",
     alt: "two cats sitting together under the autumn tree",
     ratio: 1.1,
     createtime: "2025-12-16",
@@ -763,6 +849,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p91",
     src: "https://artwork-hub.vercel.app/images/bluecat.jpg",
+    tag: "cat",
     alt: "blue cat",
     ratio: 1.0,
     createtime: "2025-12-16",
@@ -771,6 +858,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p92",
     src: "https://artwork-hub.vercel.app/images/beachview.jpg",
+    tag: "beach",
     alt: "beach view",
     ratio: 1.0,
     createtime: "2025-12-15",
@@ -779,6 +867,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p93",
     src: "https://artwork-hub.vercel.app/images/shipview.jpg",
+    tag: "ship",
     alt: "ship view",
     ratio: 1.6,
     createtime: "2025-12-28",
@@ -787,6 +876,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p94",
     src: "https://artwork-hub.vercel.app/images/moutainview.jpg",
+    tag: "mountain",
     alt: "mountain view",
     ratio: 1.0,
     createtime: "2025-12-28",
@@ -795,6 +885,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p95",
     src: "https://artwork-hub.vercel.app/images/xianrenzhang.jpg",
+    tag: "plant",
     alt: "plant leaf",
     ratio: 1.0,
     createtime: "2025-12-24",
@@ -803,6 +894,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p96",
     src: "https://artwork-hub.vercel.app/images/sheepsplay.jpg",
+    tag: "sheep",
     alt: "sheeps playing",
     ratio: 1.0,
     createtime: "2025-12-28",
@@ -811,6 +903,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p97",
     src: "https://artwork-hub.vercel.app/images/catlookingfirework.jpg",
+    tag: "cat",
     alt: "cat looking at firework",
     ratio: 1.0,
     createtime: "2026-1-6",
@@ -819,6 +912,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p98",
     src: "https://artwork-hub.vercel.app/images/humans.jpg",
+    tag: "human",
     alt: "different humans",
     ratio: 1.0,
     createtime: "2025-12-23",
@@ -827,6 +921,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p99",
     src: "https://artwork-hub.vercel.app/images/changjinlu.jpg",
+    tag: "giraffe",
     alt: "giraffe standing",
     ratio: 1.0,
     createtime: "2025-12-31",
@@ -835,6 +930,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p100",
     src: "https://artwork-hub.vercel.app/images/pugongying.jpg",
+    tag: "dandelion",
     alt: "dandelion flower",
     ratio: 1.0,
     createtime: "2025-12-20",
@@ -843,6 +939,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p101",
     src: "https://artwork-hub.vercel.app/images/bigtree.jpg",
+    tag: "tree",
     alt: "big tree",
     ratio: 1.6,
     createtime: "2025-12-29",
@@ -851,6 +948,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p102",
     src: "https://artwork-hub.vercel.app/images/book.jpg",
+    tag: "book",
     alt: "book with tomato",
     ratio: 1.1,
     createtime: "2025-12-31",
@@ -859,6 +957,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p103",
     src: "https://artwork-hub.vercel.app/images/sunset2.jpg",
+    tag: "sunset",
     alt: "sunset sky",
     ratio: 1.0,
     createtime: "2025-12-30",
@@ -867,6 +966,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p104",
     src: "https://artwork-hub.vercel.app/images/shuiguo.jpg",
+    tag: "fruit",
     alt: "fruits world",
     ratio: 1.0,
     createtime: "2025-12-30",
@@ -875,6 +975,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p105",
     src: "https://artwork-hub.vercel.app/images/xigua.jpg",
+    tag: "watermelon",
     alt: "watermelon slice",
     ratio: 1.0,
     createtime: "2026-1-1",
@@ -883,6 +984,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p106",
     src: "https://artwork-hub.vercel.app/images/newyear.jpg",
+    tag: "newyear",
     alt: "new year 2026",
     ratio: 1.0,
     createtime: "2026-1-1",
@@ -892,6 +994,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p107",
     src: "https://artwork-hub.vercel.app/images/tank.jpg",
+    tag: "tank",
     alt: "tank",
     ratio: 1.0,
     createtime: "2026-2-5",
@@ -901,6 +1004,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p108",
     src: "https://artwork-hub.vercel.app/images/awhitesheep.jpg",
+    tag: "sheep",
     alt: "a white sheep",
     ratio: 1.07,
     createtime: "2026-02-06",
@@ -910,6 +1014,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p109",
     src: "https://artwork-hub.vercel.app/images/aguineapig.jpg",
+    tag: "guinea-pig",
     alt: "a guinea pig",
     ratio: 0.88,
     createtime: "2026-02-06",
@@ -919,6 +1024,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p110",
     src: "https://artwork-hub.vercel.app/images/redcatholdtree.jpg",
+    tag: "cat",
     alt: "a red cat holding a tree",
     ratio: 1.02,
     createtime: "2026-02-06",
@@ -928,6 +1034,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p111",
     src: "https://artwork-hub.vercel.app/images/daisy.jpg",
+    tag: "daisy",
     alt: "daisy",
     ratio: 1.01,
     createtime: "2026-02-06",
@@ -937,6 +1044,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p112",
     src: "https://artwork-hub.vercel.app/images/daisyview.jpg",
+    tag: "daisy",
     alt: "pink daisy view",
     ratio: 0.51,
     createtime: "2026-02-08",
@@ -946,6 +1054,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p113",
     src: "https://artwork-hub.vercel.app/images/gateview.jpg",
+    tag: "gate",
     alt: "gate view",
     ratio: 0.98,
     createtime: "2026-02-08",
@@ -955,6 +1064,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p114",
     src: "https://artwork-hub.vercel.app/images/greenview.jpg",
+    tag: "green",
     alt: "green view",
     ratio: 1.02,
     createtime: "2026-02-08",
@@ -964,6 +1074,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p115",
     src: "https://artwork-hub.vercel.app/images/newyearnightview.jpg",
+    tag: "night",
     alt: "new year night view",
     ratio: 0.54,
     createtime: "2026-02-08",
@@ -973,6 +1084,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p116",
     src: "https://artwork-hub.vercel.app/images/springviewhouse.jpg",
+    tag: "house",
     alt: "spring view house",
     ratio: 0.49,
     createtime: "2026-02-08",
@@ -982,6 +1094,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p117",
     src: "https://artwork-hub.vercel.app/images/catwantfish.jpg",
+    tag: "cat",
     alt: "cat wants fish",
     ratio: 0.55,
     createtime: "2026-02-10",
@@ -991,6 +1104,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p118",
     src: "https://artwork-hub.vercel.app/images/girlstandingrass.jpg",
+    tag: "girl",
     alt: "girl in grass",
     ratio: 1.0,
     createtime: "2026-02-10",
@@ -1000,6 +1114,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p119",
     src: "https://artwork-hub.vercel.app/images/ladder.jpg",
+    tag: "ladder",
     alt: "ladder",
     ratio: 1.0,
     createtime: "2026-02-10",
@@ -1009,6 +1124,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p120",
     src: "https://artwork-hub.vercel.app/images/willowwithboat.jpg",
+    tag: "boat",
     alt: "willow with boat",
     ratio: 0.55,
     createtime: "2026-02-10",
@@ -1018,6 +1134,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p121",
     src: "https://artwork-hub.vercel.app/images/windowmoutainview1.jpg",
+    tag: "mountain",
     alt: "window moutain view",
     ratio: 1.0,
     createtime: "2026-02-10",
@@ -1027,6 +1144,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p122",
     src: "https://artwork-hub.vercel.app/images/winterplum.jpg",
+    tag: "plum",
     alt: "winter plum",
     ratio: 0.51,
     createtime: "2026-02-10",
@@ -1035,6 +1153,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p123",
     src: "https://artwork-hub.vercel.app/images/fujiview.jpg",
+    tag: "fuji",
     alt: "window view with fuji",
     ratio: 0.6,
     createtime: "2026-02-10",
@@ -1043,6 +1162,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p124",
     src: "https://artwork-hub.vercel.app/images/s.jpg",
+    tag: "letter",
     alt: "s word",
     ratio: 1.0,
     createtime: "2025-12-27",
@@ -1051,6 +1171,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p125",
     src: "https://artwork-hub.vercel.app/images/boatboy.jpg",
+    tag: "boat",
     alt: "boy is resting on the boat",
     ratio: 0.8,
     createtime: "2026-02-10",
@@ -1059,6 +1180,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p126",
     src: "https://artwork-hub.vercel.app/images/birds.jpg",
+    tag: "bird",
     alt: "pretty birds",
     ratio: 0.8,
     createtime: "2026-02-10",
@@ -1067,6 +1189,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p127",
     src: "https://artwork-hub.vercel.app/images/blackwithflower.jpg",
+    tag: "flower",
     alt: "flower",
     ratio: 0.8,
     createtime: "2026-02-10",
