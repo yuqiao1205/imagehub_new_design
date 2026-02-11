@@ -674,7 +674,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p71",
     src: "https://artwork-hub.vercel.app/images/sakuratree.jpg",
-    tag: "sakura",
+    tag: "sakura tree full of flowers",
     alt: "sakura tree",
     ratio: 1.5,
     createtime: "2026-1-6",
@@ -1049,7 +1049,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p112",
     src: "https://artwork-hub.vercel.app/images/daisyview.jpg",
-    tag: "daisy",
+    tag: "daisy flower",
     alt: "pink daisy view",
     ratio: 0.51,
     createtime: "2026-02-08",
@@ -1149,7 +1149,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p122",
     src: "https://artwork-hub.vercel.app/images/winterplum.jpg",
-    tag: "plum",
+    tag: "plum flower",
     alt: "winter plum",
     ratio: 0.51,
     createtime: "2026-02-10",
