@@ -665,7 +665,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p70",
     src: "https://artwork-hub.vercel.app/images/planewindow.jpg",
-    tag: "window",
+    tag: "window beach view coconut trees",
     alt: "window seat view",
     ratio: 1.0,
     createtime: "2026-1-6",
@@ -1167,7 +1167,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p124",
     src: "https://artwork-hub.vercel.app/images/s.jpg",
-    tag: "letter",
+    tag: "letter humans",
     alt: "s word",
     ratio: 1.0,
     createtime: "2025-12-27",
