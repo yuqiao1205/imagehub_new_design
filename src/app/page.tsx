@@ -13,6 +13,7 @@ export default function Home() {
   const [openDropdown, setOpenDropdown] = useState(false);
   const [randomSeed, setRandomSeed] = useState<number>(1);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
     // Re-seed *after* initial render to avoid SSR/client hydration mismatch.
@@ -34,8 +35,23 @@ export default function Home() {
 
   const categories = Array.from(new Set(galleryItems.map(item => item.category).filter(cat => cat !== undefined))).sort();
 
+  // Get all unique tags for tag suggestions
+  const allTags = Array.from(new Set(galleryItems.map(item => item.tag).filter(tag => tag !== undefined))).sort();
+
   const sortedItems = useMemo(() => {
     let items = [...galleryItems];
+    
+    // Filter by search query
+    if (searchQuery.trim()) {
+      const query = searchQuery.toLowerCase();
+      items = items.filter(item => {
+        const tagMatch = item.tag?.toLowerCase().includes(query);
+        const altMatch = item.alt.toLowerCase().includes(query);
+        const categoryMatch = item.category?.toLowerCase().includes(query);
+        return tagMatch || altMatch || categoryMatch;
+      });
+    }
+    
     if (selectedCategory !== 'all') {
       items = items.filter(item => item.category === selectedCategory);
     }
@@ -44,7 +60,7 @@ export default function Home() {
     }
     const rand = seededRandom(randomSeed);
     return items.sort(() => rand() - 0.5);
-  }, [sortBy, selectedCategory, sortOrder, randomSeed]);
+  }, [sortBy, selectedCategory, sortOrder, randomSeed, searchQuery]);
 
   const baseItems = sortedItems;
 
@@ -275,6 +291,48 @@ export default function Home() {
             </div>
 
             <div className="mb-6">
+              {/* Search input */}
+              <div className="mb-4">
+                <label className="block text-sm font-medium text-zinc-950 mb-2">Search by tag, keyword, or category:</label>
+                <div className="relative">
+                  <input
+                    type="text"
+                    placeholder="Try: cat, flower, beach, girl..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="w-full px-3 py-2 border border-zinc-300 rounded-md bg-white text-zinc-950 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zinc-400 focus:border-transparent"
+                  />
+                  {searchQuery && (
+                    <button
+                      onClick={() => setSearchQuery('')}
+                      className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-zinc-600"
+                      aria-label="Clear search"
+                    >
+                      ✕
+                    </button>
+                  )}
+                </div>
+                {/* Tag suggestions */}
+                {allTags.length > 0 && (
+                  <div className="mt-2">
+                    <span className="text-xs text-zinc-500 mr-2">Popular tags:</span>
+                    {allTags.slice(0, 11).map((tag) => (
+                      <button
+                        key={tag}
+                        onClick={() => setSearchQuery(tag || '')}
+                        className={`inline-block px-2 py-0.5 text-xs rounded-full mr-1 mb-1 transition ${
+                          searchQuery.toLowerCase() === tag?.toLowerCase()
+                            ? 'bg-zinc-800 text-white'
+                            : 'bg-zinc-100 text-zinc-600 hover:bg-zinc-200'
+                        }`}
+                      >
+                        {tag}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+
               <label className="block text-sm font-medium text-zinc-950 mb-2">Filter by category:</label>
               <div role="radiogroup" className="flex flex-wrap gap-3">
                 <label className="inline-flex items-center gap-2 rounded-md border border-zinc-300 bg-white px-3 py-2 text-sm text-zinc-950 cursor-pointer">
@@ -302,29 +360,53 @@ export default function Home() {
               </div>
             </div>
             <div className="columns-3 gap-6 md:gap-8 space-y-4 md:space-y-6">
-              {items.map((item) => (
-                <Link key={item.id} href={`/gallery/${item.id}`} className="block mb-4">
-                  <figure
-                    style={{ aspectRatio: item.ratio }}
-                    className="group relative overflow-hidden transition hover:-translate-y-0.5 focus:-translate-y-0.5 break-inside-avoid cursor-pointer p-6"
+              {items.length === 0 ? (
+                <div className="col-span-full text-center py-12">
+                  <p className="text-zinc-500 text-lg">No items found for "{searchQuery}"</p>
+                  <button
+                    onClick={() => setSearchQuery('')}
+                    className="mt-2 text-zinc-800 hover:underline"
                   >
-                  <img
-                    src={item.src}
-                    alt={item.alt}
-                    loading={item.id === "p1" ? "eager" : "lazy"}
-                    className="absolute inset-0 h-full w-full object-cover transition duration-500 ease-out group-hover:scale-[1.06] group-focus:scale-[1.06]"
-                  />
+                    Clear search
+                  </button>
+                </div>
+              ) : (
+                <>
+                  {searchQuery && (
+                    <div className="col-span-full text-sm text-zinc-500 mb-2">
+                      Found {items.length} item{items.length !== 1 ? 's' : ''} for "{searchQuery}"
+                    </div>
+                  )}
+                  {items.map((item) => (
+                    <Link key={item.id} href={`/gallery/${item.id}`} className="block mb-4">
+                      <figure
+                        style={{ aspectRatio: item.ratio }}
+                        className="group relative overflow-hidden transition hover:-translate-y-0.5 focus:-translate-y-0.5 break-inside-avoid cursor-pointer p-6"
+                      >
+                      <img
+                        src={item.src}
+                        alt={item.alt}
+                        loading={item.id === "p1" ? "eager" : "lazy"}
+                        className="absolute inset-0 h-full w-full object-cover transition duration-500 ease-out group-hover:scale-[1.06] group-focus:scale-[1.06]"
+                      />
 
-                  {/* Hover overlay */}
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-zinc-950/20 via-zinc-950/0 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus:opacity-100" />
-                  <figcaption className="pointer-events-none absolute bottom-0 left-0 right-0 p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus:opacity-100">
-                    <p className="text-xs font-medium text-white/95 drop-shadow">
-                      {item.alt}
-                    </p>
-                  </figcaption>
-                </figure>
-                </Link>
-              ))}
+                      {/* Hover overlay */}
+                      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-zinc-950/20 via-zinc-950/0 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus:opacity-100" />
+                      <figcaption className="pointer-events-none absolute bottom-0 left-0 right-0 p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus:opacity-100">
+                        <p className="text-xs font-medium text-white/95 drop-shadow">
+                          {item.alt}
+                        </p>
+                        {item.tag && (
+                          <span className="inline-block mt-1 px-1.5 py-0.5 text-[10px] bg-zinc-800/70 text-white/90 rounded">
+                            {item.tag}
+                          </span>
+                        )}
+                      </figcaption>
+                    </figure>
+                    </Link>
+                  ))}
+                </>
+              )}
             </div>
           </section>
 

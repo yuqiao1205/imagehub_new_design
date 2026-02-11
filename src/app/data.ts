@@ -118,7 +118,7 @@ export const galleryItems: GalleryItem[] = [
     id: "p10",
     src: "https://artwork-hub.vercel.app/images/redroofcat.jpg",
     alt: "Cat on the Autumn Roof",
-    tag: "cat",
+    tag: "cat and spring",
     description: "A cozy scene of a cat perched on a red roof, surrounded by autumn leaves and a warm, inviting atmosphere.",
     ratio: 1.1,
     createtime: "2024-12-23",
@@ -198,7 +198,7 @@ export const galleryItems: GalleryItem[] = [
     id: "p18",
     src: "https://artwork-hub.vercel.app/images/bear.jpg",
     alt: "Surprised Cat and Cozy Reindeer",
-    tag: "bear",
+    tag: "cat and reindeer",
     description: "A surprised cat and a cozy reindeer sharing a moment of warmth and friendship in a whimsical setting.",
     ratio: 1.45,
     createtime: "2024-12-22",
@@ -274,7 +274,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p26",
     src: "https://artwork-hub.vercel.app/images/moutain.jpg",
-    tag: "mountain",
+    tag: "mountain sea",
     alt: "Moutain View",
     ratio: 0.65,
     objectFit: 'contain',
@@ -303,7 +303,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p29",
     src: "https://artwork-hub.vercel.app/images/redgirl.jpg",
-    tag: "girl",
+    tag: "red girl",
     alt: "Girl in Red Coat",
     ratio: 0.7,
     createtime: "2025-12-25",
@@ -373,8 +373,8 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "p37",
-    src: "https://artwork-hub.vercel.app/images/animal.jpg",
-    tag: "animal",
+    src: "https://artwork-hub.vercel.app/images/hedgehog_racon.jpg",
+    tag: "hedgehog",
     alt: "Animal Friends",
     ratio: 0.45,
     createtime: "2025-12-22",
@@ -412,7 +412,7 @@ export const galleryItems: GalleryItem[] = [
     id: "p41",
     src: "https://artwork-hub.vercel.app/images/girlcarry.jpg",
     tag: "girl",
-    alt: "girl carrying flowers",
+    alt: "girl carrying small tree",
     ratio: 0.7,
     createtime: "2026-1-2",
     category: "figure",
@@ -683,7 +683,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p72",
     src: "https://artwork-hub.vercel.app/images/snowcabin.jpg",
-    tag: "cabin",
+    tag: "cabin and snow",
     alt: "cabins in the snow",
     ratio: 1.0,
     createtime: "2026-1-7",
@@ -782,7 +782,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p83",
     src: "https://artwork-hub.vercel.app/images/yellowflower.jpg",
-    tag: "flower",
+    tag: "flower with houses",
     alt: "yellow flower with house",
     ratio: 1.5,
     createtime: "2026-2-2",
@@ -800,7 +800,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p85",
     src: "https://artwork-hub.vercel.app/images/moon.jpg",
-    tag: "moon",
+    tag: "moon and night with boat",
     alt: "full moon night",
     ratio: 0.7,
     createtime: "2026-2-3",
@@ -872,7 +872,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p93",
     src: "https://artwork-hub.vercel.app/images/shipview.jpg",
-    tag: "ship",
+    tag: "boat ship",
     alt: "ship view",
     ratio: 1.6,
     createtime: "2025-12-28",
@@ -908,7 +908,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p97",
     src: "https://artwork-hub.vercel.app/images/catlookingfirework.jpg",
-    tag: "cat",
+    tag: "cat and firework",
     alt: "cat looking at firework",
     ratio: 1.0,
     createtime: "2026-1-6",
@@ -917,7 +917,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p98",
     src: "https://artwork-hub.vercel.app/images/humans.jpg",
-    tag: "human",
+    tag: "human and people",
     alt: "different humans",
     ratio: 1.0,
     createtime: "2025-12-23",
@@ -1079,7 +1079,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p115",
     src: "https://artwork-hub.vercel.app/images/newyearnightview.jpg",
-    tag: "night",
+    tag: "night firework",
     alt: "new year night view",
     ratio: 0.54,
     createtime: "2026-02-08",
@@ -1139,7 +1139,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p121",
     src: "https://artwork-hub.vercel.app/images/windowmoutainview1.jpg",
-    tag: "mountain",
+    tag: "mountain view with sheep",
     alt: "window moutain view",
     ratio: 1.0,
     createtime: "2026-02-10",
