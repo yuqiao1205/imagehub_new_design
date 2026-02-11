@@ -274,8 +274,8 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p26",
     src: "https://artwork-hub.vercel.app/images/moutain.jpg",
-    tag: "mountain sea",
-    alt: "Moutain View",
+    tag: "mountain and sea",
+    alt: "Mountain View",
     ratio: 0.65,
     objectFit: 'contain',
     createtime: "2026-1-2",
@@ -728,7 +728,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p77",
     src: "https://artwork-hub.vercel.app/images/guilin.jpg",
-    tag: "guilin",
+    tag: "guilin mountain",
     alt: "guilin landscape",
     ratio: 1.0,
     createtime: "2026-1-17",
@@ -1140,7 +1140,7 @@ export const galleryItems: GalleryItem[] = [
     id: "p121",
     src: "https://artwork-hub.vercel.app/images/windowmoutainview1.jpg",
     tag: "mountain view with sheep",
-    alt: "window moutain view",
+    alt: "window mountain view",
     ratio: 1.0,
     createtime: "2026-02-10",
     category: "landscape",
@@ -1158,7 +1158,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p123",
     src: "https://artwork-hub.vercel.app/images/fujiview.jpg",
-    tag: "fuji",
+    tag: "fuji mountain",
     alt: "window view with fuji",
     ratio: 0.6,
     createtime: "2026-02-10",
