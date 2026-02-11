@@ -507,6 +507,7 @@ export const galleryItems: GalleryItem[] = [
     alt: "hanging duck",
     ratio: 1.2,
     createtime: "2025-12-15",
+    category: "animal",
   },
   {
     id: "p53",
@@ -515,6 +516,7 @@ export const galleryItems: GalleryItem[] = [
     alt: "cute banana",
     ratio: 1.2,
     createtime: "2025-12-15",
+    category: "fruit",
   },
   {
     id: "p54",
@@ -532,6 +534,7 @@ export const galleryItems: GalleryItem[] = [
     ratio: 1.1,
     tag: "door",
     createtime: "2025-12-21",
+    category: "object",
   },
   {
     id: "p56",
@@ -639,6 +642,7 @@ export const galleryItems: GalleryItem[] = [
     tag: "cat",
     ratio: 1.0,
     createtime: "2026-1-5",
+    category: "animal",
   },
   {
     id: "p68",
@@ -647,6 +651,7 @@ export const galleryItems: GalleryItem[] = [
     tag: "lamp",
     ratio: 0.9,
     createtime: "2026-1-5",
+    category: "object",
   },
   {
     id: "p69",
