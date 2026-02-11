@@ -466,7 +466,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "p47",
     src: "https://artwork-hub.vercel.app/images/watermelon.jpg",
-    tag: "watermelon",
+    tag: "watermelon duck",
     alt: "duck swimming in watermelon pool",
     ratio: 1.2,
     createtime: "2026-1-3",
