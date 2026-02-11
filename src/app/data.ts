@@ -981,7 +981,7 @@ export const galleryItems: GalleryItem[] = [
 
   {
     id: "p117",
-    src: "https://artwork-hub.vercel.app/images/catwantsfish.jpg",
+    src: "https://artwork-hub.vercel.app/images/catwantfish.jpg",
     alt: "cat wants fish",
     ratio: 0.55,
     createtime: "2026-02-10",
