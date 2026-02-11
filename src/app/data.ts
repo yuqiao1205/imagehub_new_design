@@ -532,7 +532,7 @@ export const galleryItems: GalleryItem[] = [
     src: "https://artwork-hub.vercel.app/images/blackdoor.jpg",
     alt: "black door",
     ratio: 1.1,
-    tag: "door",
+    tag: "garden door",
     createtime: "2025-12-21",
     category: "object",
   },
