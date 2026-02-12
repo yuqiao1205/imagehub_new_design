@@ -1219,6 +1219,24 @@ export const galleryItems: GalleryItem[] = [
     category: "animal",
   },
 
+  {
+    id: "p130",
+    src: "https://artwork-hub.vercel.app/images/catwithflower.jpg",
+    tag: "cat with flower",
+    alt: "cat hiding in the flower",
+    ratio: 1.0,
+    createtime: "2026-2-12",
+    category: "animal",
+  },
+  {
+    id: "p131",
+    src: "https://artwork-hub.vercel.app/images/catholdorange.jpg",
+    tag: "cat with orange",
+    alt: "cat holding orange",
+    ratio: 1.0,
+    createtime: "2026-2-12",
+    category: "animal",
+  },
   
 
 
