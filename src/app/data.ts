@@ -1202,13 +1202,24 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "p128",
-    src: "https://artwork-hub.vercel.app/images/ciwei.jpg",
-    tag: "hedgehog",
-    alt: "cute hedgehog",
+    src: "https://artwork-hub.vercel.app/images/girlinrain.jpg",
+    tag: "girl in rain",
+    alt: "girl in rain",
     ratio: 0.8,
-    createtime: "2025-12-22",
+    createtime: "2026-2-11",
+    category: "figure",
+  },
+  {
+    id: "p129",
+    src: "https://artwork-hub.vercel.app/images/fish2.jpg",
+    tag: "fish",
+    alt: "fish with ripples",
+    ratio: 1.0,
+    createtime: "2026-2-12",
     category: "animal",
-  }
+  },
+
+  
 
 
 
