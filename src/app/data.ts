@@ -1,6 +1,7 @@
 export type GalleryItem = {
   id: string;
   src: string;
+  thumbSrc?: string;
   alt: string;
   /**
    * Used for a 3-up justified row layout.
@@ -22,7 +23,7 @@ export type GalleryItem = {
 };
 
 // Pexels examples (you can swap/add more). We vary span + aspect for a dynamic layout.
-export const galleryItems: GalleryItem[] = [
+const rawGalleryItems: GalleryItem[] = [
   {
     id: "p1",
     // src: "https://images.pexels.com/photos/35051828/pexels-photo-35051828.jpeg",
@@ -1312,3 +1313,12 @@ export const galleryItems: GalleryItem[] = [
 
 
 ];
+
+export const galleryItems: GalleryItem[] = rawGalleryItems.map((item) => {
+  const filename = item.src.split("/").pop();
+
+  return {
+    ...item,
+    thumbSrc: item.thumbSrc ?? (filename ? `/images/thumbs/${filename}` : item.src),
+  };
+});

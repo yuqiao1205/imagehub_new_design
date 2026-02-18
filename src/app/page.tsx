@@ -433,7 +433,7 @@ export default function Home() {
                         className="group relative overflow-hidden transition hover:-translate-y-0.5 focus:-translate-y-0.5 break-inside-avoid cursor-pointer p-6"
                       >
                       <img
-                        src={item.src}
+                        src={item.thumbSrc ?? item.src}
                         alt={item.alt}
                         loading="lazy"
                         className="absolute inset-0 h-full w-full object-cover transition duration-500 ease-out group-hover:scale-[1.06] group-focus:scale-[1.06]"
