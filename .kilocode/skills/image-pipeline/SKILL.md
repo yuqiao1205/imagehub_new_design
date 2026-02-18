@@ -24,7 +24,10 @@ ls -la /Users/yan/Downloads/waiting \
 && npm run heic:convert \
 && ls -la /Users/yan/Downloads/waiting/*.jpg \
 && cp -n /Users/yan/Downloads/waiting/*.jpg public/images/ \
-&& ls -lt public/images/*.jpg | head -10
+&& mkdir -p public/images/thumbs \
+&& for f in public/images/*.jpg; do base=$(basename "$f"); if [ ! -f "public/images/thumbs/$base" ]; then sips -Z 400 "$f" --out "public/images/thumbs/$base"; fi; done \
+&& ls -lt public/images/*.jpg | head -10 \
+&& ls -lt public/images/thumbs/*.jpg | head -10
 </command>
 </execute_command>
 
@@ -32,7 +35,8 @@ Then immediately run:
 
 <execute_command>
 <command>
-file public/images/*.jpg | head -10
+file public/images/*.jpg | head -10 \
+&& file public/images/thumbs/*.jpg | head -10
 </command>
 </execute_command>
 
@@ -44,6 +48,7 @@ From the output in Step 1:
 
 ### Identify new files
 - Detect **NEW `.jpg` files** added to `public/images`
+- Detect **NEW `.jpg` files** added to `public/images/thumbs`
 - Ignore existing images already listed in `data.ts`
 
 ---

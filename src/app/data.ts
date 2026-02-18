@@ -1283,6 +1283,15 @@ const rawGalleryItems: GalleryItem[] = [
     createtime: "2026-02-17",
     category: "plant",
   },
+  {
+    id: "p137",
+    src: "https://artwork-hub.vercel.app/images/nightviewmoutain.jpg",
+    tag: "night view mountain with beach",
+    alt: "night view mountain",
+    ratio: 1.0,
+    createtime: "2026-02-17",
+    category: "landscape",
+  },
   
 
 
