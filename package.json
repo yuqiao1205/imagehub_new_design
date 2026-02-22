@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "heic:convert": "node .kilocode/skills/scripts/convert-heic-to-jpg.mjs"
+    "heic:convert": "node .kilocode/skills/image-pipeline/scripts/convert-heic-to-jpg.mjs"
   },
   "dependencies": {
     "chokidar": "^4.0.3",
