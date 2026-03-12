@@ -206,7 +206,7 @@ export default function Home() {
 
       <div className="relative mx-auto flex min-h-screen max-w-7xl flex-col md:flex-row">
         {/* Left sidebar */}
-        <aside className="border-b border-zinc-200/70 bg-white/70 px-6 py-6 backdrop-blur md:sticky md:top-0 md:h-screen md:w-80 md:border-b-0 md:border-r">
+        <aside className="sticky top-0 z-40 border-b border-zinc-200/70 bg-white/90 px-6 py-6 backdrop-blur md:static md:h-screen md:w-80 md:border-b-0 md:border-r">
           <div className="flex items-center gap-3 md:block">
             <button
               type="button"
