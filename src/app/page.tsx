@@ -495,7 +495,7 @@ export default function Home() {
             <div className="mt-3 space-y-2 text-base leading-7 text-zinc-600">
               <p>Email: laurenpy1226@gmail.com</p>
               <p>Location: San Francisco, CA</p>
-              <p>Portfolio: <a href="https://yuqiao1205.github.io/portfolio/" target="_blank" rel="noopener noreferrer" className="text-zinc-950 hover:text-zinc-700 underline">yuqiao1205.github.io/portfolio</a></p>
+              {/* <p>Portfolio: <a href="https://yuqiao1205.github.io/portfolio/" target="_blank" rel="noopener noreferrer" className="text-zinc-950 hover:text-zinc-700 underline">yuqiao1205.github.io/portfolio</a></p> */}
               <p>Available for commissions and collaborations</p>
             </div>
           </section>
