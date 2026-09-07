@@ -1456,35 +1456,285 @@ const rawGalleryItems: GalleryItem[] = [
     createtime: "2026-03-19",
     category: "plant",
   },
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  {
+    id: "p157",
+    src: "/images/red-car-spring-meadow.jpg",
+    alt: "Red car beside a spring meadow",
+    ratio: 1.0351,
+    createtime: "2026-09-07",
+    category: "landscape",
+    tag: "red car spring meadow",
+  },
+  {
+    id: "p158",
+    src: "/images/daisies-sun-and-airplane.jpg",
+    alt: "Daisies framing the sun and an airplane",
+    ratio: 0.5067,
+    createtime: "2026-09-07",
+    category: "landscape",
+    tag: "daisies sun and airplane",
+  },
+  {
+    id: "p159",
+    src: "/images/coastal-road-under-clouds.jpg",
+    alt: "Coastal road beneath towering clouds",
+    ratio: 0.4907,
+    createtime: "2026-09-07",
+    category: "landscape",
+    tag: "coastal road under clouds",
+  },
+  {
+    id: "p160",
+    src: "/images/golden-mountain-pine-forest.jpg",
+    alt: "Golden mountain above a pine forest",
+    ratio: 1.0084,
+    createtime: "2026-09-07",
+    category: "landscape",
+    tag: "golden mountain pine forest",
+  },
+  {
+    id: "p161",
+    src: "/images/moonlit-lake-canoe.jpg",
+    alt: "Canoe on a moonlit mountain lake",
+    ratio: 0.9699,
+    createtime: "2026-09-07",
+    category: "landscape",
+    tag: "moonlit lake canoe",
+  },
+  {
+    id: "p162",
+    src: "/images/bicycle-flower-basket.jpg",
+    alt: "Bicycle with a flower-filled basket",
+    ratio: 1.0256,
+    createtime: "2026-09-07",
+    category: "object",
+    tag: "bicycle flower basket",
+  },
+  {
+    id: "p163",
+    src: "/images/cats-watching-aquarium.jpg",
+    alt: "Two black cats watching aquarium fish",
+    ratio: 0.9468,
+    createtime: "2026-09-07",
+    category: "animal",
+    tag: "cats watching aquarium",
+  },
+  {
+    id: "p164",
+    src: "/images/girl-blue-beanie-sunglasses.jpg",
+    alt: "Girl wearing a blue beanie and sunglasses",
+    ratio: 0.6596,
+    createtime: "2026-09-07",
+    category: "figure",
+    tag: "girl blue beanie sunglasses",
+  },
+  {
+    id: "p165",
+    src: "/images/girl-red-sweater-bouquet.jpg",
+    alt: "Girl in a red sweater carrying flowers",
+    ratio: 0.5521,
+    createtime: "2026-09-07",
+    category: "figure",
+    tag: "girl red sweater bouquet",
+  },
+  {
+    id: "p166",
+    src: "/images/girl-yellow-hat-floral-skirt.jpg",
+    alt: "Girl in a yellow hat and floral skirt",
+    ratio: 0.5717,
+    createtime: "2026-09-07",
+    category: "figure",
+    tag: "girl yellow hat floral skirt",
+  },
+  {
+    id: "p167",
+    src: "/images/girl-striped-shirt-blue-skirt.jpg",
+    alt: "Girl in a striped shirt and blue skirt",
+    ratio: 0.526,
+    createtime: "2026-09-07",
+    category: "figure",
+    tag: "girl striped shirt blue skirt",
+  },
+  {
+    id: "p168",
+    src: "/images/red-haired-girl-layered-skirt.jpg",
+    alt: "Red-haired girl wearing a layered skirt",
+    ratio: 0.5681,
+    createtime: "2026-09-07",
+    category: "figure",
+    tag: "red haired girl layered skirt",
+  },
+  {
+    id: "p169",
+    src: "/images/deer-beneath-flowering-branches.jpg",
+    alt: "Deer beneath trailing flowering branches",
+    ratio: 0.5225,
+    createtime: "2026-09-07",
+    category: "landscape",
+    tag: "deer beneath flowering branches",
+  },
+  {
+    id: "p170",
+    src: "/images/pink-flowers-dark-frame.jpg",
+    alt: "Pink flowers spilling over a dark frame",
+    ratio: 1.0575,
+    createtime: "2026-09-07",
+    category: "plant",
+    tag: "pink flowers dark frame",
+  },
+  {
+    id: "p171",
+    src: "/images/wildflower-meadow-cliff.jpg",
+    alt: "Wildflower meadow beneath a grassy cliff",
+    ratio: 1.0401,
+    createtime: "2026-09-07",
+    category: "landscape",
+    tag: "wildflower meadow cliff",
+  },
+  {
+    id: "p172",
+    src: "/images/yellow-white-floral-frame.jpg",
+    alt: "Yellow and white flowers with trailing greenery",
+    ratio: 1.0096,
+    createtime: "2026-09-07",
+    category: "plant",
+    tag: "yellow white floral frame",
+  },
+  {
+    id: "p173",
+    src: "/images/mount-fuji-cherry-blossom-lake.jpg",
+    alt: "Mount Fuji across a cherry blossom lake",
+    ratio: 1.0065,
+    createtime: "2026-09-07",
+    category: "landscape",
+    tag: "mount fuji cherry blossom lake",
+  },
+  {
+    id: "p174",
+    src: "/images/cat-window-tree-silhouette.jpg",
+    alt: "Cat at a window beneath a tree silhouette",
+    ratio: 1.0281,
+    createtime: "2026-09-07",
+    category: "animal",
+    tag: "cat window tree silhouette",
+  },
+  {
+    id: "p175",
+    src: "/images/tropical-beach-towering-clouds.jpg",
+    alt: "Tropical beach beneath towering white clouds",
+    ratio: 0.5076,
+    createtime: "2026-09-07",
+    category: "landscape",
+    tag: "tropical beach towering clouds",
+  },
+  {
+    id: "p176",
+    src: "/images/daisies-red-brick-wall.jpg",
+    alt: "White daisies above a red brick wall",
+    ratio: 0.9972,
+    createtime: "2026-09-07",
+    category: "plant",
+    tag: "daisies red brick wall",
+  },
+  {
+    id: "p177",
+    src: "/images/sailboat-golden-sunset.jpg",
+    alt: "Sailboat beneath a golden sunset",
+    ratio: 0.9515,
+    createtime: "2026-09-07",
+    category: "landscape",
+    tag: "sailboat golden sunset",
+  },
+  {
+    id: "p178",
+    src: "/images/forest-golden-sky.jpg",
+    alt: "Forest beneath a golden sky",
+    ratio: 1.028,
+    createtime: "2026-09-07",
+    category: "landscape",
+    tag: "forest golden sky",
+  },
+  {
+    id: "p179",
+    src: "/images/golden-maple-leaf-ripples.jpg",
+    alt: "Golden maple leaf floating in blue ripples",
+    ratio: 1.0192,
+    createtime: "2026-09-07",
+    category: "plant",
+    tag: "golden maple leaf ripples",
+  },
+  {
+    id: "p180",
+    src: "/images/mount-fuji-lakeside-path.jpg",
+    alt: "Lakeside path with Mount Fuji and cherry blossoms",
+    ratio: 0.9818,
+    createtime: "2026-09-07",
+    category: "landscape",
+    tag: "mount fuji lakeside path",
+  },
+  {
+    id: "p181",
+    src: "/images/black-cat-flowering-vines.jpg",
+    alt: "Black cat beneath flowering vines",
+    ratio: 0.8322,
+    createtime: "2026-09-07",
+    category: "animal",
+    tag: "black cat flowering vines",
+  },
+  {
+    id: "p182",
+    src: "/images/white-daisies-blue-sky.jpg",
+    alt: "White daisies against a blue sky",
+    ratio: 1.0426,
+    createtime: "2026-09-07",
+    category: "plant",
+    tag: "white daisies blue sky",
+  },
+  {
+    id: "p183",
+    src: "/images/starry-night-river-reflections.jpg",
+    alt: "Starry night reflected in a winding river",
+    ratio: 0.9831,
+    createtime: "2026-09-07",
+    category: "landscape",
+    tag: "starry night river reflections",
+  },
+  {
+    id: "p184",
+    src: "/images/pink-wildflowers-seaside.jpg",
+    alt: "Pink wildflowers overlooking the sea",
+    ratio: 1.0128,
+    createtime: "2026-09-07",
+    category: "landscape",
+    tag: "pink wildflowers seaside",
+  },
+  {
+    id: "p185",
+    src: "/images/yellow-field-snowy-mountains.jpg",
+    alt: "Yellow field beneath snowy mountains",
+    ratio: 1.0445,
+    createtime: "2026-09-07",
+    category: "landscape",
+    tag: "yellow field snowy mountains",
+  },
+  {
+    id: "p186",
+    src: "/images/golden-gate-bridge-sailboat.jpg",
+    alt: "Sailboat beneath the Golden Gate Bridge",
+    ratio: 0.979,
+    createtime: "2026-09-07",
+    category: "landscape",
+    tag: "golden gate bridge sailboat",
+  },
+  {
+    id: "p187",
+    src: "/images/daisies-in-cracked-vase.jpg",
+    alt: "White daisies in a cracked vase",
+    ratio: 1.001,
+    createtime: "2026-09-07",
+    category: "plant",
+    tag: "daisies in cracked vase",
+  },
 ];
 
 export const galleryItems: GalleryItem[] = rawGalleryItems.map((item) => {
