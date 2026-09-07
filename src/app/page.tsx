@@ -72,7 +72,13 @@ export default function Home() {
       return items.sort((a, b) => sortOrder === 'asc' ? new Date(a.createtime).getTime() - new Date(b.createtime).getTime() : new Date(b.createtime).getTime() - new Date(a.createtime).getTime());
     }
     const rand = seededRandom(randomSeed);
-    return items.sort(() => rand() - 0.5);
+    // Fisher–Yates uses a fixed sequence of random draws across JS engines.
+    // A random sort comparator can produce different SSR and client orders.
+    for (let i = items.length - 1; i > 0; i--) {
+      const j = Math.floor(rand() * (i + 1));
+      [items[i], items[j]] = [items[j], items[i]];
+    }
+    return items;
   }, [sortBy, selectedCategory, sortOrder, randomSeed, searchQuery]);
 
   // Get currently displayed items
