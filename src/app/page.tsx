@@ -485,24 +485,52 @@ export default function Home() {
             </div>
           </section>
 
-          <section id="about" className="mt-16 max-w-3xl scroll-mt-10">
-            <h2 className="text-xl font-semibold tracking-tight text-zinc-950">
-              About
+          <section id="about" aria-labelledby="about-heading" className="relative mt-16 max-w-3xl scroll-mt-28 overflow-hidden rounded-3xl border border-white/80 bg-gradient-to-br from-[#fcfaf5] via-[#f8faf6] to-[#eef4ef] p-6 shadow-[0_12px_48px_-24px_rgba(45,75,62,0.2)] sm:p-9" style={{ fontFamily: 'var(--font-geist-sans), sans-serif' }}>
+            <div className="flex items-center justify-between gap-4">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#637c70]">About · Behind the art</p>
+              <div aria-hidden="true" className="flex -space-x-1.5">
+                <span className="h-5 w-5 rounded-full border-2 border-[#fafaf5] bg-[#b7cbb8]" />
+                <span className="h-5 w-5 rounded-full border-2 border-[#fafaf5] bg-[#d8bdd0]" />
+                <span className="h-5 w-5 rounded-full border-2 border-[#fafaf5] bg-[#e8c982]" />
+              </div>
+            </div>
+            <h2 id="about-heading" className="mt-5 max-w-lg text-3xl font-medium leading-[1.15] tracking-[-0.04em] text-[#2f4b40] sm:text-4xl">
+              A little color.<br />A different way of <span className="font-serif italic text-[#7a8562]">seeing.</span>
             </h2>
-            <p className="mt-3 text-base leading-7 text-zinc-600">
-              I create warm, curious, and slightly surreal images by mixing texture, light, and clean composition. Inspired by Van Gogh, I experiment with bold color blocks and acrylic markers to create expressive, layered works. This site is a living archive of my recent work and visual explorations in progress.
-            </p>
+            <div className="mt-5 max-w-xl space-y-3 text-sm leading-7 text-[#657269]">
+              <p>I create warm, curious, and slightly surreal images — exploring the everyday through texture, light, and thoughtful composition.</p>
+              <p>Inspired by <span className="font-medium text-[#3f5d4e]">Van Gogh</span>, I mix bold color blocks and acrylic markers to make expressive, layered works. This gallery is a living archive of what I’m making, imagining, and discovering along the way.</p>
+            </div>
+            <div className="mt-6 flex flex-wrap gap-2 border-t border-[#d8e1d6] pt-5" aria-label="Artistic interests">
+              {['Bold color', 'Hand-drawn textures', 'Everyday wonder'].map((interest) => (
+                <span key={interest} className="rounded-full border border-[#dce4d8] bg-white/60 px-3 py-1 text-[11px] font-medium tracking-wide text-[#5a7162]">{interest}</span>
+              ))}
+            </div>
           </section>
 
-          <section id="contact" className="mt-10 max-w-3xl scroll-mt-10">
-            <h2 className="text-xl font-semibold tracking-tight text-zinc-950">
-              Contact
-            </h2>
-            <div className="mt-3 space-y-2 text-base leading-7 text-zinc-600">
-              <p>Email: laurenpy1226@gmail.com</p>
-              <p>Location: San Francisco, CA</p>
-              {/* <p>Portfolio: <a href="https://yuqiao1205.github.io/portfolio/" target="_blank" rel="noopener noreferrer" className="text-zinc-950 hover:text-zinc-700 underline">yuqiao1205.github.io/portfolio</a></p> */}
-              <p>Available for commissions and collaborations</p>
+          <section id="contact" aria-labelledby="contact-heading" className="relative mt-12 max-w-3xl scroll-mt-28 overflow-hidden rounded-3xl border border-white/80 bg-gradient-to-br from-[#faf8ff] via-[#f5f3ff] to-[#eef6f3] p-6 shadow-[0_12px_48px_-24px_rgba(79,70,110,0.25)] sm:p-9" style={{ fontFamily: 'var(--font-geist-sans), sans-serif' }}>
+            <div aria-hidden="true" className="pointer-events-none absolute -right-12 -top-16 h-48 w-48 rounded-full border border-[#bcb1d4]/25" />
+            <div className="relative">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#74638f]">Contact · Say hello</p>
+              <h2 id="contact-heading" className="mt-4 text-3xl font-medium leading-tight tracking-[-0.04em] text-[#352d49] sm:text-4xl">
+                Let’s make something <span className="font-serif italic text-[#806598]">beautiful.</span>
+              </h2>
+              <p className="mt-3 max-w-md text-sm leading-6 text-[#70697d]">
+                Have an idea in mind? I’d love to bring it to life with a little color and curiosity.
+              </p>
+              <a href="mailto:laurenpy1226@gmail.com" className="group mt-6 inline-flex max-w-full items-center gap-3 rounded-2xl bg-[#514264] px-4 py-3.5 text-sm font-medium text-white shadow-sm transition-colors hover:bg-[#66517d] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#806598] sm:px-5">
+                <span className="min-w-0 break-all">laurenpy1226@gmail.com</span>
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-4 w-4 shrink-0 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 motion-reduce:transform-none">
+                  <path d="M6 18 18 6M6 6h12v12" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </a>
+              <div className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-3 border-t border-[#d9d2e4]/70 pt-5 text-xs leading-5 text-[#70697d]">
+                <span>San Francisco, CA</span>
+                <span className="inline-flex items-center gap-2 text-[#486b5d]">
+                  <span aria-hidden="true" className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#699b81]" />
+                  Open for commissions &amp; collaborations
+                </span>
+              </div>
             </div>
           </section>
         </main>
